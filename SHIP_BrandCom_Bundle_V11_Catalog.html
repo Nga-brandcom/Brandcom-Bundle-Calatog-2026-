@@ -1,0 +1,1543 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PMAX BrandCom Bundle Catalog V11</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blue:#0000FF; --azure:#0080FF; --aqua:#00FFFF;
+  --red:#FF0000; --vivid:#FF6000; --orange:#FFA500; --purple:#8B00FF;
+  --ink:#0A0A2A; --muted:#5b5b74; --line:#e6e6ef; --bg:#ffffff; --soft:#f6f7fb;
+  --tier1:#0000FF; --tier2:#FF6000; --tier3:#FF0000; --tier3p:#8B00FF;
+  --radius:14px;
+  --shadow:0 10px 30px -12px rgba(10,10,42,.18);
+  --display:'Archivo','Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+}
+/* Brand display typeface (Archivo — PMAX primary) for logotype + headings.
+   SemiExpanded look approximated with slight positive tracking. */
+.logo .mark, .logo .tag, .appbar .titles h1,
+.ov-head h2, .b-hero h2, .stat .n, .pr-sec h5, table.ov thead th, tr.tier-row td{
+  font-family:var(--display);
+}
+.logo .mark, .b-hero h2, .ov-head h2{letter-spacing:.2px}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  color:var(--ink); background:var(--bg); line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* ---------- Header ---------- */
+header.appbar{
+  position:sticky; top:0; z-index:50;
+  background:#fff; border-bottom:1px solid var(--line);
+  display:flex; align-items:center; justify-content:space-between;
+  padding:14px 26px; gap:20px; flex-wrap:wrap;
+}
+.brand{display:flex; align-items:center; gap:14px}
+.logo-img{height:46px; width:auto; display:block}
+.logo{display:flex; flex-direction:column; line-height:1}
+.logo .mark{display:flex; align-items:flex-end; gap:2px; font-weight:800; font-size:30px; letter-spacing:-1px}
+.logo .mark .p{color:var(--blue)}
+.logo .mark svg{display:block}
+.logo .mark .ax{color:var(--blue)}
+.logo .tag{font-size:9px; font-weight:700; letter-spacing:3.5px; color:var(--blue); margin-top:3px}
+.appbar .titles{border-left:2px solid var(--line); padding-left:16px}
+.appbar .titles h1{font-size:16px; font-weight:700}
+.appbar .titles p{font-size:12px; color:var(--muted)}
+.appbar .meta{font-size:11px; color:var(--muted); text-align:right}
+.appbar .meta b{color:var(--ink)}
+
+/* ---------- Tabs ---------- */
+nav.tabs{
+  position:sticky; top:71px; z-index:40; background:#fff;
+  border-bottom:1px solid var(--line);
+  display:flex; gap:4px; padding:8px 18px; overflow-x:auto; scrollbar-width:thin;
+}
+nav.tabs::-webkit-scrollbar{height:6px}
+nav.tabs::-webkit-scrollbar-thumb{background:var(--line); border-radius:3px}
+.tab-btn{
+  flex:0 0 auto; border:1px solid transparent; background:transparent;
+  padding:7px 13px; border-radius:9px; font-family:inherit; font-size:12.5px;
+  font-weight:600; color:var(--muted); cursor:pointer; white-space:nowrap;
+  transition:.15s; display:flex; align-items:center; gap:7px;
+}
+.tab-btn:hover{background:var(--soft); color:var(--ink)}
+.tab-btn .dot{width:8px; height:8px; border-radius:50%; flex:0 0 auto}
+.tab-btn.active{color:#fff}
+.tab-btn.active[data-tier="1"]{background:var(--tier1)}
+.tab-btn.active[data-tier="2"]{background:var(--tier2)}
+.tab-btn.active[data-tier="3"]{background:var(--tier3)}
+.tab-btn.active[data-tier="3p"]{background:var(--tier3p)}
+.tab-btn.active[data-tier="ov"]{background:var(--ink)}
+
+/* ---------- Layout ---------- */
+main{max-width:1180px; margin:0 auto; padding:30px 26px 80px}
+.panel{display:none; animation:fade .35s ease}
+.panel.active{display:block}
+@keyframes fade{from{opacity:0; transform:translateY(8px)}to{opacity:1; transform:none}}
+
+/* ---------- Overview ---------- */
+.ov-head{margin-bottom:22px}
+.ov-head h2{font-size:26px; font-weight:800; letter-spacing:-.5px}
+.ov-head p{color:var(--muted); font-size:14px; margin-top:4px}
+.ov-stats{display:flex; gap:12px; flex-wrap:wrap; margin:20px 0 26px}
+.stat{
+  border:1px solid var(--line); border-radius:var(--radius); padding:14px 18px;
+  min-width:130px; background:var(--soft);
+}
+.stat .n{font-size:24px; font-weight:800}
+.stat .l{font-size:11px; color:var(--muted); font-weight:600; text-transform:uppercase; letter-spacing:.5px}
+.stat.t1 .n{color:var(--tier1)} .stat.t2 .n{color:var(--tier2)}
+.stat.t3 .n{color:var(--tier3)} .stat.t3p .n{color:var(--tier3p)}
+
+.toolbar{display:flex; gap:12px; flex-wrap:wrap; align-items:center; margin-bottom:14px}
+.toolbar input, .toolbar select{
+  font-family:inherit; font-size:13px; padding:9px 13px; border:1px solid var(--line);
+  border-radius:9px; color:var(--ink); background:#fff; outline:none;
+}
+.toolbar input{min-width:240px; flex:1}
+.toolbar input:focus, .toolbar select:focus{border-color:var(--azure)}
+.toolbar .hint{font-size:11.5px; color:var(--muted)}
+
+.tbl-wrap{border:1px solid var(--line); border-radius:var(--radius); overflow:hidden}
+table.ov{width:100%; border-collapse:collapse; font-size:13px}
+table.ov thead th{
+  background:var(--ink); color:#fff; text-align:left; padding:12px 14px;
+  font-weight:600; font-size:11.5px; text-transform:uppercase; letter-spacing:.4px;
+  cursor:pointer; user-select:none; white-space:nowrap; position:sticky; top:0;
+}
+table.ov thead th:hover{background:#181848}
+table.ov thead th .arw{opacity:.4; font-size:10px}
+tr.tier-row td{
+  padding:9px 14px; font-weight:800; font-size:12px; letter-spacing:.5px;
+  text-transform:uppercase; color:#fff;
+}
+tr.tier-row.t1 td{background:var(--tier1)}
+tr.tier-row.t2 td{background:var(--tier2)}
+tr.tier-row.t3 td{background:var(--tier3)}
+tr.tier-row.t3p td{background:var(--tier3p)}
+table.ov tbody td{padding:12px 14px; border-bottom:1px solid var(--line); vertical-align:top}
+table.ov tbody tr.data-row:hover{background:var(--soft)}
+.sku-link{
+  font-weight:700; color:var(--blue); cursor:pointer; font-variant-numeric:tabular-nums;
+  text-decoration:none; border-bottom:1px dashed transparent;
+}
+.sku-link:hover{border-bottom-color:var(--blue)}
+.bname{font-weight:600}
+.badge{
+  display:inline-block; padding:3px 9px; border-radius:20px; font-size:11px; font-weight:700;
+  white-space:nowrap;
+}
+.badge.role{background:#eef0ff; color:var(--blue)}
+.st{display:inline-flex; align-items:center; gap:6px; font-size:12px; font-weight:600}
+.st .d{width:8px; height:8px; border-radius:50%}
+.st.validated .d{background:#12b76a} .st.validated{color:#087a43}
+.st.monitor .d{background:var(--orange)} .st.monitor{color:#b26a00}
+.st.new .d{background:var(--red)} .st.new{color:var(--red)}
+.vert{color:var(--muted); font-size:12.5px}
+
+/* ---------- Bundle detail ---------- */
+.b-hero{
+  border-radius:var(--radius); padding:26px 28px; color:#fff; margin-bottom:22px;
+  position:relative; overflow:hidden; box-shadow:var(--shadow);
+}
+.b-hero[data-tier="1"]{background:linear-gradient(120deg,var(--blue),var(--azure))}
+.b-hero[data-tier="2"]{background:linear-gradient(120deg,var(--vivid),var(--orange))}
+.b-hero[data-tier="3"]{background:linear-gradient(120deg,var(--red),var(--vivid))}
+.b-hero[data-tier="3p"]{background:linear-gradient(120deg,var(--purple),#c026d3)}
+.b-hero .tierlabel{font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; opacity:.9}
+.b-hero h2{font-size:27px; font-weight:800; margin:6px 0 4px; letter-spacing:-.5px}
+.b-hero .sku{font-size:13px; font-weight:600; opacity:.92; font-variant-numeric:tabular-nums}
+.b-hero .stdname{font-size:12.5px; opacity:.82; margin-top:8px; font-style:italic}
+
+.infocard{
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:0;
+  border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; margin-bottom:14px;
+}
+.infocard .cell{padding:14px 16px; border-right:1px solid var(--line); border-bottom:1px solid var(--line)}
+.infocard .cell .k{font-size:10.5px; font-weight:700; text-transform:uppercase; letter-spacing:.6px; color:var(--muted)}
+.infocard .cell .v{font-size:14px; font-weight:600; margin-top:3px}
+
+.components{
+  border:1px solid var(--line); border-radius:var(--radius); padding:16px 18px; margin-bottom:26px;
+}
+.components h4{font-size:12px; text-transform:uppercase; letter-spacing:.6px; color:var(--muted); margin-bottom:10px}
+.comp-bar{display:flex; height:30px; border-radius:8px; overflow:hidden; margin-bottom:12px}
+.comp-seg{display:flex; align-items:center; justify-content:center; color:#fff; font-size:11px; font-weight:700; min-width:34px}
+.comp-list{display:flex; flex-wrap:wrap; gap:8px}
+.comp-chip{font-size:12px; padding:4px 10px; border-radius:20px; background:var(--soft); border:1px solid var(--line); font-weight:600}
+.comp-chip b{color:var(--blue)}
+
+/* PR columns */
+.pr-toggle{display:flex; gap:8px; margin-bottom:16px}
+.pr-toggle button{
+  font-family:inherit; font-size:12.5px; font-weight:600; padding:8px 16px; border-radius:9px;
+  border:1px solid var(--line); background:#fff; color:var(--muted); cursor:pointer;
+}
+.pr-toggle button.active{background:var(--ink); color:#fff; border-color:var(--ink)}
+.pr-grid{display:grid; grid-template-columns:1fr 1fr; gap:22px}
+.pr-grid.single{grid-template-columns:1fr}
+.pr-col{border:1px solid var(--line); border-radius:var(--radius); overflow:hidden}
+.pr-col .col-head{
+  padding:11px 18px; font-size:12px; font-weight:700; letter-spacing:.5px; text-transform:uppercase;
+  color:#fff; display:flex; align-items:center; gap:8px;
+}
+.pr-col.vi .col-head{background:var(--blue)}
+.pr-col.en .col-head{background:var(--vivid)}
+.pr-col .col-body{padding:6px 20px 18px}
+.pr-sec{padding:14px 0; border-bottom:1px solid var(--line)}
+.pr-sec:last-child{border-bottom:none}
+.pr-sec h5{font-size:13px; font-weight:800; color:var(--ink); margin-bottom:7px; display:flex; align-items:center; gap:8px}
+.pr-sec h5 .orig{font-weight:400; opacity:.6; font-size:11px; letter-spacing:0}
+.pr-sec h5 .ic{
+  width:22px; height:22px; border-radius:6px; display:inline-flex; align-items:center; justify-content:center;
+  font-size:12px; color:#fff; flex:0 0 auto;
+}
+.pr-col.vi .ic{background:var(--azure)} .pr-col.en .ic{background:var(--orange)}
+.pr-sec p{font-size:13px; color:#2a2a44; margin-bottom:8px}
+.pr-sec ul{list-style:none; margin:4px 0 8px}
+.pr-sec ul li{font-size:12.8px; color:#2a2a44; padding-left:18px; position:relative; margin-bottom:6px}
+.pr-sec ul li::before{content:"▸"; position:absolute; left:0; color:var(--azure); font-size:11px; top:1px}
+.pr-col.en ul li::before{color:var(--vivid)}
+.pr-sec .conseq{color:var(--red); font-style:italic; font-size:12px}
+.quote{
+  background:var(--soft); border-left:3px solid var(--blue); padding:12px 16px; border-radius:0 8px 8px 0;
+  font-style:italic; font-size:13px; color:#2a2a44;
+}
+.pr-col.en .quote{border-left-color:var(--vivid)}
+.quote .who{display:block; margin-top:8px; font-style:normal; font-weight:700; font-size:12px; color:var(--ink)}
+.disclaim{font-size:11.5px; color:var(--orange); font-weight:600; margin-bottom:8px}
+
+footer{border-top:1px solid var(--line); padding:24px 26px; text-align:center; color:var(--muted); font-size:12px}
+
+/* ---------- Responsive ---------- */
+@media(max-width:860px){
+  .pr-grid{grid-template-columns:1fr}
+  .appbar .titles{border-left:none; padding-left:0}
+  .appbar .meta{display:none}
+  main{padding:22px 16px 60px}
+  table.ov{font-size:12px}
+}
+
+/* ---------- Print ---------- */
+@media print{
+  nav.tabs, .pr-toggle, .toolbar, .tab-btn{display:none !important}
+  header.appbar{position:static; box-shadow:none}
+  .panel{display:none !important}
+  .panel.print-me{display:block !important}
+  .pr-grid{grid-template-columns:1fr 1fr !important; gap:14px}
+  .b-hero{-webkit-print-color-adjust:exact; print-color-adjust:exact; box-shadow:none}
+  .pr-col .col-head, tr.tier-row td, table.ov thead th, .comp-seg{-webkit-print-color-adjust:exact; print-color-adjust:exact}
+  body{font-size:11px}
+  .panel{page-break-after:always}
+}
+</style>
+</head>
+<body>
+
+<header class="appbar">
+  <div class="brand">
+    <img class="logo-img" src="data:image/png;base64,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AAAAGiYABAAAAICGCQABAAAAoGECQAAAAABomAAQAAAAABomAAQAAACAhgkAAQAAAKBhAkAAAAAAaJgAEAAAAAAaJgAEAAAAgIYJAAEAAACgYQJAAAAAAGiYABAAAAAAGiYABAAAAICGCQABAAAAoGECQAAAAABomAAQAAAAABomAAQAAACAhgkAAQAAAKBhAkAAAAAAaJgAEAAAAAAaJgAEAAAAgIYJAAEAAACgYQJAAAAAAGiYABAAAAAAGiYABAAAAICGCQABAAAAoGECQAAAAABomAAQAAAAABomAAQAAACAhgkAAQAAAKBhAkAAAAAAaJgAEAAAAAAaJgAEAAAAgIYJAAEAAACgYQJAAAAAAGiYABAAAAAAGiYABAAAAICGCQABAAAAoGECQAAAAABomAAQAAAAABomAAQAAACAhgkAAQAAAKBhAkAAAAAAaJgAEAAAAAAaJgAEAAAAgIYJAAEAAACgYQJAAAAAAGiYABAAAAAAGiYABAAAAICGCQABAAAAoGECQAAAAABomAAQAAAAABomAAQAAACAhgkAAQAAAKBhAkAAAAAAaJgAEAAAAAAaJgAEAAAAgIYJAAEAAACgYQJAAAAAAGiYABAAAGCacp4AAAAwSURBVAAAGiYABAAAAICGCQABAAAAoGECQAAAAABomAAQAAAAABomAAQAAACAhv3/ZCCOiAMg37QAAAAASUVORK5CYII=" alt="PMAX — Total Marketing Partner">
+    <div class="titles">
+      <h1>BrandCom Bundle Catalog</h1>
+      <p>V11 · 15 Bundle Products · Product Registration V2</p>
+    </div>
+  </div>
+  <div class="meta">
+    <div>COE Owner: <b>nga.dao@pmax.com.vn</b></div>
+    <div>Version <b>V11-V2</b> · July 2026 · Enterprise BU</div>
+  </div>
+</header>
+
+<nav class="tabs" id="tabs"></nav>
+
+<main id="main"></main>
+
+<footer>
+  PMAX BrandCom Bundle Catalog V11 · Generated from BrandCom_Bundle_V11_Product_Registration_V2 ·
+  Solution: Branding · Business Unit: Enterprise · <span id="pf"></span>
+</footer>
+
+<script>
+/* ============================================================
+   DATA — extracted from BrandCom_Bundle_V11_Product_Registration_V2.md
+   Vietnamese content is verbatim from source (Block 2 §②③④⑥⑧).
+   English content is a faithful translation of the same sections.
+============================================================ */
+const TIERS = {
+  "1":  {label:"Tier 1 — Duo",      cls:"t1",  dot:"var(--tier1)"},
+  "2":  {label:"Tier 2 — Trio+",    cls:"t2",  dot:"var(--tier2)"},
+  "3":  {label:"Tier 3 — IMC",      cls:"t3",  dot:"var(--tier3)"},
+  "3p": {label:"Tier 3 — Premium",  cls:"t3p", dot:"var(--tier3p)"}
+};
+const COMP_COLORS = ["#0000FF","#0080FF","#FF6000","#FF0000","#8B00FF"];
+
+const BUNDLES = [
+ {
+  "n": 1,
+  "sku": "E-BDBR006",
+  "tier": "1",
+  "name": "Brandformance Duo — KOL + Live",
+  "role": "Lead",
+  "combo": "Influencer + Livestream",
+  "status": "Validated — 13 projects",
+  "stType": "validated",
+  "verticals": "FMCG, Beauty, Real Estate, Fintech, Education, Fashion, Home, Finance, Auto, Healthcare",
+  "stdName": "Bundle. Branding. [≥300M]. KOL+Live Duo",
+  "components": [
+   {
+    "sku": "E-INBR001",
+    "fn": "Influencer",
+    "pct": 55
+   },
+   {
+    "sku": "E-LSBR001",
+    "fn": "Livestream",
+    "pct": 45
+   }
+  ],
+  "vi": {
+   "overview": "Brandformance Duo kết nối KOL/Influencer và Livestream thành một hành trình liền mạch từ tạo ảnh hưởng đến tạo doanh thu. KOL xây dựng nhận biết, niềm tin và nhu cầu; Livestream chuyển nhu cầu đó thành tương tác và đơn hàng trong đúng thời điểm. Gói giải pháp phù hợp với thương hiệu muốn vận hành trọn vẹn phễu influence-to-commerce trong một chiến dịch, đồng thời tiết kiệm 15–20% so với thuê hai dịch vụ riêng lẻ.",
+   "customers": [
+    "Ngành ưu tiên: FMCG, Beauty, Real Estate, Fintech, Education, Fashion, Home, Finance, Auto, Healthcare",
+    "Quy mô: Revenue 200B-2,000B/năm, team marketing 5-15 người",
+    "Budget: Từ 300M/tháng (influencer + livestream combined)",
+    "Bối cảnh: Đang chạy KOL campaigns và livestream riêng lẻ qua 2 vendor khác nhau, chưa có workflow thống nhất từ content seeding → live selling",
+    "Pain level: High — conversion rate từ KOL content sang purchase thấp vì không có live touchpoint; live sessions thiếu warm audience vì KOL không funnel vào"
+   ],
+   "problems": [
+    "KOL và Livestream bị ngắt kết nối: Brand book KOL riêng, team live riêng → KOL post content nhưng không drive sang live session, live session thiếu warm audience → conversion rate chỉ đạt 1.5-2% thay vì 4-6% tiềm năng. Hậu quả: ROI trên KOL spend thấp, board question \"KOL có hiệu quả không?\".",
+    "Không tối ưu được content-to-commerce funnel: KOL tạo awareness nhưng không có mechanism chuyển intent sang purchase point (livestream). Data giữa 2 vendors siloed → không biết KOL nào thực sự drive sale. Hậu quả: brand tiếp tục invest vào KOL không hiệu quả, miss 30-40% revenue potential.",
+    "Quản lý 2 vendor phức tạp và tốn chi phí: Coordinate giữa agency influencer và agency livestream → timeline conflict, creative mismatch, double overhead 15-20%. Hậu quả: campaign launch chậm 1-2 tuần, CMO mất 3-5 giờ/tuần coordinate."
+   ],
+   "solution": "PMAX vận hành toàn bộ chuỗi KOL/Influencer — từ lựa chọn gương mặt, phát triển nội dung và điều phối thời điểm đăng tải đến thiết kế phiên Livestream và tối ưu chuyển đổi. Một đội ngũ, một kế hoạch và một hệ đo lường giúp thương hiệu nhìn rõ KOL nào thực sự tạo doanh số, thay vì chỉ tạo lượt tiếp cận.",
+   "quote": {
+    "text": "Trước đây book KOL qua 1 agency, live qua agency khác. KOL post xong 3 ngày mới có live session — audience đã quên. Từ khi dùng PMAX bundle, KOL post chiều → live tối cùng ngày → conversion rate tăng từ 1.8% lên 4.2%. Quan trọng nhất là 1 dashboard thấy rõ KOL nào thực sự drive sale.",
+    "who": "— Trần Thị Minh Anh, E-commerce Director, [Beauty Brand — revenue 350B/năm]"
+   }
+  },
+  "en": {
+   "overview": "Brandformance Duo connects KOL/Influencer marketing and Livestream into one influence-to-commerce journey. KOLs build awareness, trust, and purchase intent; Livestream converts that intent into real-time engagement and sales. The bundle is designed for brands seeking a complete commercial funnel within one campaign, with 15–20% savings versus commissioning the two services separately.",
+   "customers": [
+    "Priority industries: FMCG, Beauty, Real Estate, Fintech, Education, Fashion, Home, Finance, Auto, Healthcare",
+    "Business profile: Brands with annual revenue of VND 200–2,000 billion, marketing teams of 5–15 people, and combined influencer/livestream budgets from VND 300 million per month."
+   ],
+   "solution": "PMAX manages the full journey—from talent selection and content development to publishing cadence, live-session design, and conversion optimization. One integrated team and measurement framework reveal which influencers generate commercial value, not only reach.",
+   "quote": {
+    "text": "Trước đây book KOL qua 1 agency, live qua agency khác. KOL post xong 3 ngày mới có live session — audience đã quên. Từ khi dùng PMAX bundle, KOL post chiều → live tối cùng ngày → conversion rate tăng từ 1.8% lên 4.2%. Quan trọng nhất là 1 dashboard thấy rõ KOL nào thực sự drive sale.",
+    "who": "— Trần Thị Minh Anh, E-commerce Director, [Beauty Brand — revenue 350B/năm]"
+   }
+  }
+ },
+ {
+  "n": 2,
+  "sku": "E-BDBR007",
+  "tier": "1",
+  "name": "Content Amplifier — Creative + Media",
+  "role": "Lead",
+  "combo": "Creative + Media",
+  "status": "Validated — 5 projects",
+  "stType": "validated",
+  "verticals": "All vertical",
+  "stdName": "Bundle. Branding. [≥400M]. Creative+Media Duo",
+  "components": [
+   {
+    "sku": "E-CRBR003",
+    "fn": "Creative",
+    "pct": 35
+   },
+   {
+    "sku": "E-MEBR005",
+    "fn": "Media",
+    "pct": 65
+   }
+  ],
+  "vi": {
+   "overview": "Content Amplifier tích hợp sáng tạo nội dung và hoạch định — triển khai truyền thông trong cùng một hệ vận hành. Nội dung được thiết kế ngay từ đầu theo vai trò của từng kênh, thay vì sản xuất xong mới điều chỉnh để chạy quảng cáo. Cách tiếp cận này giúp tăng hiệu quả truyền thông 20–30% và tiết kiệm 15–20% so với sử dụng riêng agency sáng tạo và agency truyền thông.",
+   "customers": [
+    "Ngành ưu tiên: Tất cả ngành (All vertical)",
+    "Quy mô: Revenue 300B-1,500B/năm, team marketing 8-20 người",
+    "Budget: Từ 400M/tháng (creative production + media spend combined)",
+    "Bối cảnh: Đang thuê creative agency riêng và media agency riêng → creative không tối ưu cho platform, media team không hiểu creative intent",
+    "Pain level: High — creative cost cao nhưng ad performance thấp vì content không made-for-platform"
+   ],
+   "problems": [
+    "Creative-Media disconnect: Creative agency sản xuất TVC/visual theo brief chung → media agency nhận asset mới adapt cho channels → creative không native cho platform, ad relevance score thấp, CPM tăng 20-30%. Hậu quả: media budget lãng phí vì content underperform.",
+    "Iteration chậm: Creative agency deliver 1 batch/tháng → media team cần test nhiều variants nhưng phải chờ → không kịp optimize creative theo performance data. Hậu quả: miss optimal creative window, ROAS giảm 15-20%.",
+    "Double cost, double management: Creative fee + media fee riêng → overhead 25-35% tổng budget. 2 vendor = 2 reporting timelines, 2 sets meetings/tuần. Hậu quả: CMO mất 3-5 giờ/tuần coordinate, vẫn không unified view."
+   ],
+   "solution": "Đội ngũ Creative và Media của PMAX cùng làm việc trên một mục tiêu kinh doanh, một hệ dữ liệu và một nhịp tối ưu hằng tuần. Dữ liệu truyền thông định hướng phiên bản sáng tạo; năng lực sáng tạo đồng thời định hình kế hoạch kênh, tạo vòng phản hồi liên tục giữa ý tưởng và hiệu quả.",
+   "quote": {
+    "text": "Trước đây creative agency giao assets, media agency mất 1 tuần adapt cho đúng specs. Giờ PMAX làm cả 2 — creative team biết chính xác TikTok cần hook 3 giây đầu, YouTube cần 15s pre-roll — ad performance tăng 28% mà cost giảm 18%.",
+    "who": "— Nguyễn Hoàng Nam, Brand Manager, [Pharma Brand — revenue 500B/năm]"
+   }
+  },
+  "en": {
+   "overview": "Content Amplifier integrates creative production with media planning and buying in one operating model. Assets are designed for the role, format, and behavior of each channel from the outset—not retrofitted after production. This approach can improve media effectiveness by 20–30% and reduce costs by 15–20% versus separate creative and media agencies.",
+   "customers": [
+    "Priority industries: All vertical",
+    "Business profile: Brands with annual revenue of VND 300–1,500 billion, marketing teams of 8–20 people, and combined production/media budgets from VND 400 million per month."
+   ],
+   "solution": "PMAX’s Creative and Media specialists work against one commercial objective, shared data, and a weekly optimization rhythm. Media signals inform creative variants, while creative possibilities shape channel planning—creating a continuous feedback loop between ideas and performance.",
+   "quote": {
+    "text": "Trước đây creative agency giao assets, media agency mất 1 tuần adapt cho đúng specs. Giờ PMAX làm cả 2 — creative team biết chính xác TikTok cần hook 3 giây đầu, YouTube cần 15s pre-roll — ad performance tăng 28% mà cost giảm 18%.",
+    "who": "— Nguyễn Hoàng Nam, Brand Manager, [Pharma Brand — revenue 500B/năm]"
+   }
+  }
+ },
+ {
+  "n": 3,
+  "sku": "E-BDBR008",
+  "tier": "1",
+  "name": "Strategy Attach — Media + Strategy",
+  "role": "Lead / Attach",
+  "combo": "Media + Strategy",
+  "status": "Validated — 5 projects",
+  "stType": "validated",
+  "verticals": "All vertical",
+  "stdName": "Bundle. Branding. [≥500M]. Media+Strategy Duo",
+  "components": [
+   {
+    "sku": "E-MEBR005",
+    "fn": "Media",
+    "pct": 75
+   },
+   {
+    "sku": "E-STBR003",
+    "fn": "Strategy Foundation",
+    "pct": 25
+   }
+  ],
+  "vi": {
+   "overview": "Strategy Attach bổ sung lớp chiến lược vào hoạt động quản trị Media, để mỗi quyết định phân bổ ngân sách được dẫn dắt bởi mục tiêu kinh doanh, định hướng thương hiệu và vai trò của từng kênh. Gói phù hợp với doanh nghiệp đã có năng lực sáng tạo nội bộ nhưng cần một đối tác Media có chiều sâu chiến lược, thay vì chỉ đặt mua và tối ưu quảng cáo.",
+   "customers": [
+    "Ngành ưu tiên: Tất cả ngành (All vertical)",
+    "Quy mô: Revenue 500B-3,000B/năm, đã có in-house creative hoặc creative agency riêng",
+    "Budget: Media spend từ 500M/tháng",
+    "Bối cảnh: Media agency hiện tại chỉ execute (booking + optimization) nhưng thiếu strategic direction → media plan reactive, chạy theo tháng, không có long-term brand media strategy",
+    "Pain level: High — CFO đòi chứng minh media ROI nhưng agency chỉ report impressions/clicks, không connect business KPIs"
+   ],
+   "problems": [
+    "Media execution thiếu strategic direction: Agency chạy media theo brief tháng → không brand media strategy dài hạn, channel mix quyết định bởi habit thay vì data → 25-30% budget có thể reallocate hiệu quả hơn. Hậu quả: SOV giảm dần mặc dù budget tăng.",
+    "Không connect media KPI với business outcomes: Report focus impressions, CTR, CPM → CMO không thể present ROI cho board bằng business language. Hậu quả: Marketing bị coi là cost center, budget cắt 15-20%/năm.",
+    "Category & competitive intelligence gap: Agency không provide competitive media analysis, SOV tracking → media decisions dựa gut feel. Hậu quả: miss emerging channels, competitor outspend ở key moments."
+   ],
+   "solution": "PMAX xây dựng chiến lược trước khi triển khai Media: phân khúc đối tượng, kiến trúc kênh, khung KPI gắn với kết quả kinh doanh, và cơ chế theo dõi cạnh tranh. Nhờ đó, báo cáo không dừng ở CPM, CTR hay lượt tiếp cận mà hỗ trợ CMO giải trình hiệu quả đầu tư bằng ngôn ngữ của ban lãnh đạo.",
+   "quote": {
+    "text": "Agency cũ report CPM, CTR, reach — toàn metrics marketing. Board hỏi 'bao nhiêu đồng media tạo ra bao nhiêu đồng revenue?' thì không ai trả lời được. PMAX setup KPI framework map media → business outcomes. Giờ tôi present board bằng business language, budget approved nhanh hơn.",
+    "who": "— Lê Quang Huy, CMO, [Finance Brand — revenue 2,000B/năm]"
+   }
+  },
+  "en": {
+   "overview": "Strategy Attach adds a strategic layer to media management so that investment decisions are guided by business objectives, brand direction, and the role of each channel. It is built for organizations with in-house creative capability that need a media partner with strategic depth—not merely buying and optimization capacity.",
+   "customers": [
+    "Priority industries: All vertical",
+    "Business profile: Brands with annual revenue of VND 500–3,000 billion, an established creative resource, and media investment from VND 500 million per month."
+   ],
+   "solution": "PMAX establishes the strategic foundation before media execution: audience segmentation, channel architecture, a business-linked KPI framework, and competitive intelligence. Reporting therefore moves beyond CPM, CTR, and reach to help CMOs demonstrate investment value in board-level terms.",
+   "quote": {
+    "text": "Agency cũ report CPM, CTR, reach — toàn metrics marketing. Board hỏi 'bao nhiêu đồng media tạo ra bao nhiêu đồng revenue?' thì không ai trả lời được. PMAX setup KPI framework map media → business outcomes. Giờ tôi present board bằng business language, budget approved nhanh hơn.",
+    "who": "— Lê Quang Huy, CMO, [Finance Brand — revenue 2,000B/năm]"
+   }
+  }
+ },
+ {
+  "n": 4,
+  "sku": "E-BDBR009",
+  "tier": "1",
+  "name": "Live Commerce — Livestream + Media",
+  "role": "Lead",
+  "combo": "Livestream + Media",
+  "status": "Validated — 4 projects",
+  "stType": "validated",
+  "verticals": "FMCG, Beauty, Real Estate, Fintech, Education, Fashion, Home, Finance, Auto, Healthcare",
+  "stdName": "Bundle. Branding. [≥500M]. Livestream+Media Duo",
+  "components": [
+   {
+    "sku": "E-LSBR001",
+    "fn": "Livestream",
+    "pct": 40
+   },
+   {
+    "sku": "E-MEBR003",
+    "fn": "Media",
+    "pct": 60
+   }
+  ],
+  "vi": {
+   "overview": "Live Commerce kết hợp vận hành Livestream với khuếch đại bằng Media để biến phát trực tiếp từ một hoạt động bán hàng đơn lẻ thành một kênh tăng trưởng có thể mở rộng. Truyền thông trả phí đưa đúng người xem vào đúng thời điểm; đội ngũ Livestream tối ưu trải nghiệm, tương tác và chuyển đổi. Mô hình hướng tới khả năng tăng lượng xem 3–5 lần và GMV 2–3 lần so với chỉ dựa vào tiếp cận tự nhiên.",
+   "customers": [
+    "Ngành ưu tiên: FMCG, Beauty, Real Estate, Fintech, Education, Fashion, Home, Finance, Auto, Healthcare",
+    "Quy mô: Revenue 300B-5,000B/năm, đã có live commerce operation nhưng muốn scale",
+    "Budget: Từ 500M/tháng (live operation + media amplification)",
+    "Bối cảnh: Đang chạy live trên Shopee/TikTok nhưng viewership plateau, organic reach giảm → cần paid media boost nhưng không biết allocate bao nhiêu cho media vs live operation",
+    "Pain level: Critical — live commerce là growth priority nhưng GMV per session đang flat"
+   ],
+   "problems": [
+    "Live viewership bị giới hạn organic reach: Platform algorithm ưu tiên entertainment over commerce → organic viewership giảm 30-40% YoY. Brands chỉ dựa vào organic sẽ thấy live GMV stagnate. Hậu quả: investment vào live operation (host, studio, product) không scale được.",
+    "Media budget cho live chưa tối ưu: Brands boost live bằng basic ads (in-feed) nhưng không có strategic media approach → cost per viewer cao, quality viewer thấp (view nhưng không buy). Hậu quả: media spend cho live có ROI thấp hơn 50% so với tiềm năng.",
+    "Live operation và Media siloed: Team live focus vào content + host training, team media focus vào ads → không coordinate timing, audience targeting, creative messaging. Hậu quả: media drive traffic vào live session khi host chưa sẵn sàng, hoặc live hay nhưng không có traffic."
+   ],
+   "solution": "PMAX vận hành Livestream và Media như một cỗ máy thương mại thống nhất: cùng lịch nội dung, cùng phân khúc đối tượng, cùng thông điệp và cùng mục tiêu GMV. Ngân sách được tối ưu theo chất lượng người xem và khả năng mua hàng, không chỉ theo số lượt xem.",
+   "quote": {
+    "text": "Chúng tôi chạy live 5 sessions/tuần nhưng viewership chỉ 200-500 người. Sau khi PMAX setup media amplification đồng bộ, viewership tăng lên 2,000-5,000 người/session. Quan trọng hơn, quality viewer — người xem đã biết brand, có intent mua — conversion rate live tăng từ 3% lên 8%.",
+    "who": "— Phạm Văn Đức, Head of E-commerce, [Appliances Brand — revenue 1,200B/năm]"
+   }
+  },
+  "en": {
+   "overview": "Live Commerce combines Livestream operations with paid-media amplification, turning isolated live-selling sessions into a scalable revenue channel. Media brings qualified audiences into the right session at the right moment; the Livestream team optimizes experience, engagement, and conversion. The model targets 3–5x viewership and 2–3x GMV versus organic-only live activity.",
+   "customers": [
+    "Priority industries: FMCG, Beauty, Real Estate, Fintech, Education, Fashion, Home, Finance, Auto, Healthcare",
+    "Business profile: Brands with annual revenue of VND 300–5,000 billion, an existing live-commerce operation, and combined live/media budgets from VND 500 million per month."
+   ],
+   "solution": "PMAX operates Livestream and Media as one commerce engine—with a shared content calendar, audience strategy, message, and GMV objective. Investment is optimized for viewer quality and purchase propensity, not vanity view counts.",
+   "quote": {
+    "text": "Chúng tôi chạy live 5 sessions/tuần nhưng viewership chỉ 200-500 người. Sau khi PMAX setup media amplification đồng bộ, viewership tăng lên 2,000-5,000 người/session. Quan trọng hơn, quality viewer — người xem đã biết brand, có intent mua — conversion rate live tăng từ 3% lên 8%.",
+    "who": "— Phạm Văn Đức, Head of E-commerce, [Appliances Brand — revenue 1,200B/năm]"
+   }
+  }
+ },
+ {
+  "n": 5,
+  "sku": "E-BDBR010",
+  "tier": "1",
+  "name": "Influence + Amplify — Influencer + Media",
+  "role": "Lead",
+  "combo": "Influencer + Media",
+  "status": "Validated — 2 projects",
+  "stType": "validated",
+  "verticals": "All vertical",
+  "stdName": "Bundle. Branding. [≥400M]. Influencer+Media Duo",
+  "components": [
+   {
+    "sku": "E-INBR001",
+    "fn": "Influencer",
+    "pct": 40
+   },
+   {
+    "sku": "E-MEBR005",
+    "fn": "Media",
+    "pct": 60
+   }
+  ],
+  "vi": {
+   "overview": "Influence + Amplify kết hợp sức thuyết phục của KOL/Influencer với khả năng mở rộng của Media trả phí. Nội dung chân thực tạo niềm tin; Media đưa những nội dung hiệu quả nhất vượt ra ngoài tệp người theo dõi tự nhiên để tiếp cận đúng khách hàng ở quy mô lớn. Nhờ đó, đầu tư KOL trở thành một nguồn tài sản truyền thông có thể đo lường và tối ưu.",
+   "customers": [
+    "Ngành ưu tiên: Tất cả ngành (All vertical)",
+    "Quy mô: Revenue 300B-2,000B/năm",
+    "Budget: Từ 400M/tháng (KOL booking + media spend)",
+    "Bối cảnh: Đang dùng KOL nhưng organic reach của KOL giảm 40-50% → cần paid amplification để KOL content đạt target reach, nhưng chưa biết cách leverage KOL content cho paid ads hiệu quả",
+    "Pain level: High — KOL investment lớn nhưng reach limited bởi algorithm changes"
+   ],
+   "problems": [
+    "KOL organic reach suy giảm: Platform algorithm thay đổi → KOL posts chỉ reach 10-20% followers (vs 40-50% 2 năm trước). Brand trả millions cho KOL nhưng chỉ 1/5 audience thấy content. Hậu quả: cost per reach qua KOL tăng 3x trong 2 năm, ROI đang âm với nhiều brands.",
+    "KOL content không được leverage cho paid: Brands coi KOL content là \"organic play\" → không repurpose cho paid ads. Trong khi KOL content (authentic, social proof) thường outperform studio content 2-3x khi chạy ads. Hậu quả: miss opportunity biến KOL investment thành scalable paid asset.",
+    "KOL selection không dựa trên media amplification potential: Chọn KOL theo followers/engagement rate nhưng không tính \"content này có amplifiable không?\" → một số KOL content hay nhưng không convert khi boost, ngược lại. Hậu quả: waste 20-30% KOL budget vào content không scalable."
+   ],
+   "solution": "PMAX lựa chọn KOL dựa trên cả mức độ phù hợp thương hiệu và tiềm năng khuếch đại, sau đó phát triển nội dung có thể sử dụng trên đa nền tảng, phân phối bằng Media và đo lường xuyên suốt. Thương hiệu biết nội dung nào tạo ảnh hưởng, nội dung nào tạo hành động và nên phân bổ ngân sách tiếp theo ở đâu.",
+   "quote": {
+    "text": "KOL post reach 50,000 organic. Cùng content đó PMAX amplify qua Spark Ads + Branded Content → reach 300,000 qualified users. Chi phí thêm 30% nhưng reach tăng 6x. Bây giờ tôi coi KOL không phải 'chi phí PR' mà là 'nguồn content cho paid scale'.",
+    "who": "— Vũ Thị Hồng Nhung, Marketing Manager, [FMCG Brand — revenue 800B/năm]"
+   }
+  },
+  "en": {
+   "overview": "Influence + Amplify combines the persuasive power of KOL/Influencer content with the scale of paid media. Authentic advocacy builds trust; media extends the strongest content beyond organic follower bases to reach qualified audiences at scale. Influencer investment becomes a measurable, optimizable media asset.",
+   "customers": [
+    "Priority industries: All vertical",
+    "Business profile: Brands with annual revenue of VND 300–2,000 billion and combined influencer/media budgets from VND 400 million per month."
+   ],
+   "solution": "PMAX selects talent for both brand fit and amplification potential, develops cross-platform-ready content, scales it through paid media, and measures the journey end to end. Brands can distinguish content that earns attention from content that drives action—and invest accordingly.",
+   "quote": {
+    "text": "KOL post reach 50,000 organic. Cùng content đó PMAX amplify qua Spark Ads + Branded Content → reach 300,000 qualified users. Chi phí thêm 30% nhưng reach tăng 6x. Bây giờ tôi coi KOL không phải 'chi phí PR' mà là 'nguồn content cho paid scale'.",
+    "who": "— Vũ Thị Hồng Nhung, Marketing Manager, [FMCG Brand — revenue 800B/năm]"
+   }
+  }
+ },
+ {
+  "n": 6,
+  "sku": "E-BDBR011",
+  "tier": "2",
+  "name": "Content Campaign+ — Cr + Inf + Med + Strategy(F)",
+  "role": "Core",
+  "combo": "Creative + Influencer + Media + Strategy (Foundation)",
+  "status": "Validated — 5 projects",
+  "stType": "validated",
+  "verticals": "All vertical",
+  "stdName": "Bundle. Branding. [≥600M]. Content Campaign Trio+ (Strategy Foundation)",
+  "components": [
+   {
+    "sku": "E-CRBR003",
+    "fn": "Creative",
+    "pct": 20
+   },
+   {
+    "sku": "E-INBR001",
+    "fn": "Influencer",
+    "pct": 25
+   },
+   {
+    "sku": "E-MEBR005",
+    "fn": "Media",
+    "pct": 45
+   },
+   {
+    "sku": "E-STBR003",
+    "fn": "Strategy Foundation",
+    "pct": 10
+   }
+  ],
+  "vi": {
+   "overview": "Content Campaign+ tích hợp Creative, Influencer và Media dưới sự dẫn dắt của Strategy Foundation, tạo nên một chiến dịch hoàn chỉnh từ định hướng, sáng tạo, lan tỏa đến đo lường. Đây là lựa chọn khởi điểm cho doanh nghiệp vừa và lớn muốn chuyển từ việc điều phối nhiều nhà cung cấp sang một hệ thống chiến dịch thống nhất, nhưng chưa cần cấu hình IMC toàn diện.",
+   "customers": [
+    "Ngành ưu tiên: Tất cả ngành (All vertical)",
+    "Quy mô: Revenue 300B-2,000B/năm, team marketing 8-20 người",
+    "Budget: Từ 600M/tháng (creative + KOL + media combined)",
+    "Bối cảnh: Đang coordinate 2-3 vendors cho creative, KOL, media → muốn 1 partner tích hợp nhưng chưa cần full IMC (5 functions), chưa sẵn sàng cho Strategy Pro",
+    "Pain level: High — campaign fragmented, execution không aligned, ROI khó đo"
+   ],
+   "problems": [
+    "Campaign fragmented qua 3 vendors: Creative agency, KOL agency, media agency → mỗi vendor optimize cho mình, không optimize cho campaign tổng thể. Creative không match KOL tone, KOL content không leverage cho media, media target audience khác creative audience. Hậu quả: campaign impact giảm 30-40% do inconsistency.",
+    "Thiếu strategic direction: 3 vendors execute theo tactical brief → không có overarching campaign strategy → message fragmented, timing uncoordinated, audience journey broken. Hậu quả: brand spend nhiều nhưng message không coherent, customer confused.",
+    "Measurement impossible: 3 vendors = 3 reports, 3 metrics systems → CMO không thể attribute campaign impact to any single element. Hậu quả: next campaign budget allocation dựa gut feel, not data."
+   ],
+   "solution": "Một đội ngũ PMAX chịu trách nhiệm xuyên suốt ba năng lực thực thi, trong khi Strategy Foundation xác lập đối tượng, thông điệp, vai trò kênh và khung đo lường. Creative tạo tài sản phù hợp với KOL và Media; KOL tạo nội dung có thể khuếch đại; Media đưa thông điệp đến đúng đối tượng với quy mô cần thiết.",
+   "quote": {
+    "text": "Trước đây mỗi campaign tôi manage 3 agencies, 6 meetings/tuần, 3 reports khác nhau. Chuyển sang PMAX Content Campaign+, 1 team lo tất cả — creative đúng tone cho KOL, KOL content được boost qua media, mọi thứ aligned. Campaign consistency tăng rõ rệt, team tôi tiết kiệm 15 giờ/tuần coordinate.",
+    "who": "— Đỗ Thị Thanh Hà, Senior Brand Manager, [FMCG Brand — revenue 600B/năm]"
+   }
+  },
+  "en": {
+   "overview": "Content Campaign+ integrates Creative, Influencer, and Media under Strategy Foundation, creating a complete campaign system from direction and content development to distribution and measurement. It is an accessible entry point for mid-to-large brands moving from multi-vendor coordination to integrated campaign delivery without requiring a full IMC stack.",
+   "customers": [
+    "Priority industries: All vertical",
+    "Business profile: Brands with annual revenue of VND 300–2,000 billion, marketing teams of 8–20 people, and integrated campaign budgets from VND 600 million per month."
+   ],
+   "solution": "One PMAX team owns all three execution capabilities, while Strategy Foundation defines the audience, message, channel roles, and measurement framework. Creative assets are built to work through both influencers and media; influencer content is designed for amplification; media delivers the required scale.",
+   "quote": {
+    "text": "Trước đây mỗi campaign tôi manage 3 agencies, 6 meetings/tuần, 3 reports khác nhau. Chuyển sang PMAX Content Campaign+, 1 team lo tất cả — creative đúng tone cho KOL, KOL content được boost qua media, mọi thứ aligned. Campaign consistency tăng rõ rệt, team tôi tiết kiệm 15 giờ/tuần coordinate.",
+    "who": "— Đỗ Thị Thanh Hà, Senior Brand Manager, [FMCG Brand — revenue 600B/năm]"
+   }
+  }
+ },
+ {
+  "n": 7,
+  "sku": "E-BDBR012",
+  "tier": "2",
+  "name": "Full Funnel Live+ — Cr + Inf + Live + Strategy(F)",
+  "role": "Core",
+  "combo": "Creative + Influencer + Livestream + Strategy (Foundation)",
+  "status": "Validated — 3 projects",
+  "stType": "validated",
+  "verticals": "FMCG, Beauty, Real Estate, Education, Fashion, Home, Finance, Auto",
+  "stdName": "Bundle. Branding. [≥500M]. Full Funnel Live Trio+ (Strategy Foundation)",
+  "components": [
+   {
+    "sku": "E-CRBR001",
+    "fn": "Creative",
+    "pct": 25
+   },
+   {
+    "sku": "E-INBR001",
+    "fn": "Influencer",
+    "pct": 30
+   },
+   {
+    "sku": "E-LSBR001",
+    "fn": "Livestream",
+    "pct": 35
+   },
+   {
+    "sku": "E-STBR003",
+    "fn": "Strategy Foundation",
+    "pct": 10
+   }
+  ],
+  "vi": {
+   "overview": "Full Funnel Live+ xây dựng hành trình social commerce trọn vẹn: Creative tạo nội dung đúng chuẩn thương hiệu, Influencer khơi gợi nhận biết và nhu cầu, Livestream chuyển đổi, còn Strategy Foundation giữ toàn bộ trải nghiệm nhất quán. Gói giải pháp phù hợp với thương hiệu muốn tăng trưởng doanh thu trên TikTok, Shopee và Facebook Live mà không đánh đổi giá trị thương hiệu để lấy sản lượng ngắn hạn.",
+   "customers": [
+    "Ngành ưu tiên: FMCG, Beauty, Real Estate, Education, Fashion, Home, Finance, Auto",
+    "Quy mô: Revenue 200B-1,000B/năm, đang invest vào social commerce",
+    "Budget: Từ 500M/tháng (creative + KOL + live combined)",
+    "Bối cảnh: Đang chạy KOL + Live nhưng thiếu creative production chất lượng (dùng in-house basic) → content quality inconsistent → brand perception giảm trong live sessions",
+    "Pain level: Medium-High — social commerce growing nhưng brand quality bị sacrifice vì focus vào volume"
+   ],
+   "problems": [
+    "Content quality sacrifice cho volume: Brands push live sessions nhiều (5-7/tuần) nhưng creative assets (thumbnail, teaser, product visual) làm vội → brand perception giảm, premium customers bỏ follow. Hậu quả: GMV tăng ngắn hạn nhưng brand equity giảm dài hạn.",
+    "KOL content không coherent với brand creative: KOL post style riêng, brand visual style riêng → customer journey trải nghiệm inconsistent — thấy KOL giới thiệu 1 kiểu, vào live thấy khác, creative ads lại khác nữa. Hậu quả: trust giảm, conversion rate giảm 15-20%.",
+    "Không có strategic framework: Chạy KOL, creative, live theo campaign-by-campaign basis → không long-term social commerce strategy, không content pillar, không KOL ecosystem plan. Hậu quả: mỗi campaign start from scratch, cost per campaign không giảm theo kinh nghiệm."
+   ],
+   "solution": "PMAX thiết kế một hệ vận hành social commerce thống nhất, trong đó nội dung, KOL và Livestream cùng tuân theo một nền tảng thương hiệu và chiến lược chuyển đổi. Mỗi điểm chạm vừa phục vụ doanh số trước mắt, vừa củng cố nhận biết, niềm tin và khả năng duy trì mức giá dài hạn.",
+   "quote": {
+    "text": "Social commerce đang grow 40%/năm nhưng brand tôi bị commoditized trên live — viewers coi mình như 'mua hàng chợ'. Từ khi PMAX setup creative framework cho live + KOL, brand perception trên social platforms tăng rõ rệt. Giá bán trung bình tăng 12% vì customers perceive premium hơn.",
+    "who": "— Lê Thị Phương Linh, Marketing Director, [Beauty DTC Brand — revenue 200B/năm]"
+   }
+  },
+  "en": {
+   "overview": "Full Funnel Live+ builds an end-to-end social-commerce journey: Creative establishes brand-quality content, Influencers generate awareness and demand, Livestream converts, and Strategy Foundation keeps the experience coherent. It is designed for brands growing on TikTok, Shopee, and Facebook Live without sacrificing long-term brand value for short-term volume.",
+   "customers": [
+    "Priority industries: FMCG, Beauty, Real Estate, Education, Fashion, Home, Finance, Auto",
+    "Business profile: Brands with annual revenue of VND 200–1,000 billion, active social-commerce investment, and combined creative/influencer/live budgets from VND 500 million per month."
+   ],
+   "solution": "PMAX creates one social-commerce operating system in which content, talent, and Livestream follow a shared brand platform and conversion strategy. Every touchpoint contributes to immediate sales while strengthening recognition, trust, and long-term pricing power.",
+   "quote": {
+    "text": "Social commerce đang grow 40%/năm nhưng brand tôi bị commoditized trên live — viewers coi mình như 'mua hàng chợ'. Từ khi PMAX setup creative framework cho live + KOL, brand perception trên social platforms tăng rõ rệt. Giá bán trung bình tăng 12% vì customers perceive premium hơn.",
+    "who": "— Lê Thị Phương Linh, Marketing Director, [Beauty DTC Brand — revenue 200B/năm]"
+   }
+  }
+ },
+ {
+  "n": 8,
+  "sku": "E-BDBR013",
+  "tier": "2",
+  "name": "Performance Trio+ — Inf + Live + Med + Strategy(F)",
+  "role": "Core",
+  "combo": "Influencer + Livestream + Media + Strategy (Foundation)",
+  "status": "Validated — 2 projects",
+  "stType": "validated",
+  "verticals": "FMCG, Beauty, Real Estate, Education, Fashion, Home, Finance, Auto, Healthcare",
+  "stdName": "Bundle. Branding. [≥600M]. Performance Trio+ (Strategy Foundation)",
+  "components": [
+   {
+    "sku": "E-INBR001",
+    "fn": "Influencer",
+    "pct": 25
+   },
+   {
+    "sku": "E-LSBR001",
+    "fn": "Livestream",
+    "pct": 25
+   },
+   {
+    "sku": "E-MEBR005",
+    "fn": "Media",
+    "pct": 40
+   },
+   {
+    "sku": "E-STBR003",
+    "fn": "Strategy Foundation",
+    "pct": 10
+   }
+  ],
+  "vi": {
+   "overview": "Performance Trio+ là hệ vận hành thương mại dành cho doanh nghiệp đã có đội ngũ Creative nội bộ: Influencer tạo độ tin cậy, Livestream chuyển đổi và Media khuếch đại cả nội dung KOL lẫn phiên bán hàng; Strategy Foundation định hướng phân bổ ngân sách. Gói tập trung vào khả năng thực thi và tối ưu toàn phễu influence-to-live-to-media.",
+   "customers": [
+    "Ngành ưu tiên: FMCG, Beauty, Real Estate, Education, Fashion, Home, Finance, Auto, Healthcare",
+    "Quy mô: Revenue 300B-1,500B/năm, có in-house creative team (3+ người)",
+    "Budget: Từ 600M/tháng (KOL + Live + Media combined)",
+    "Bối cảnh: Có creative assets sẵn (brand làm), cần partner execute influence + live + media amplification → full commerce funnel",
+    "Pain level: Medium-High — có creative nhưng execution fragmented qua 3 vendors"
+   ],
+   "problems": [
+    "3 execution channels siloed: KOL, Livestream, Media được manage bởi 3 vendors → không ai optimize cross-channel. KOL post nhưng media không amplify, live không leverage KOL audience. Hậu quả: total commerce ROI chỉ đạt 40-50% tiềm năng.",
+    "Budget allocation arbitrary: Chia budget KOL/Live/Media theo tỷ lệ cũ (habitual) → không data-driven allocation. Có thể KOL channel đang underperform nhưng vẫn nhận 40% budget. Hậu quả: waste 20-30% total budget.",
+    "No strategic optimization framework: Các vendors report riêng, optimize riêng → không ai nhìn cross-channel efficiency. Hậu quả: learning from one channel không transfer sang channels khác, improvement slow."
+   ],
+   "solution": "PMAX quản trị Influencer, Livestream và Media như một danh mục đầu tư thống nhất. Ngân sách được dịch chuyển theo hiệu quả hằng tuần, dữ liệu từ mỗi kênh được sử dụng để cải thiện các kênh còn lại, và toàn bộ hệ thống cùng chịu trách nhiệm cho một mục tiêu thương mại.",
+   "quote": {
+    "text": "Chúng tôi có in-house creative team xịn nhưng execution fragmented. PMAX unified KOL + Live + Media thành 1 engine — budget tự động shift theo performance hàng tuần. Commerce ROI tăng 35% trong 3 tháng đầu tiên.",
+    "who": "— Nguyễn Đức Thành, VP Marketing, [Real Estate Brand — revenue 800B/năm]"
+   }
+  },
+  "en": {
+   "overview": "Performance Trio+ is a commerce operating model for brands with in-house creative capability: Influencers build credibility, Livestream converts, Media scales both creator content and live sessions, and Strategy Foundation guides investment allocation. The bundle focuses on execution and optimization across the influence-to-live-to-media funnel.",
+   "customers": [
+    "Priority industries: FMCG, Beauty, Real Estate, Education, Fashion, Home, Finance, Auto, Healthcare",
+    "Business profile: Brands with annual revenue of VND 300–1,500 billion, an in-house creative team of at least three people, and execution budgets from VND 600 million per month."
+   ],
+   "solution": "PMAX manages Influencer, Livestream, and Media as one investment portfolio. Budgets shift with weekly performance, learning from each channel improves the others, and the entire system is accountable to one commercial objective.",
+   "quote": {
+    "text": "Chúng tôi có in-house creative team xịn nhưng execution fragmented. PMAX unified KOL + Live + Media thành 1 engine — budget tự động shift theo performance hàng tuần. Commerce ROI tăng 35% trong 3 tháng đầu tiên.",
+    "who": "— Nguyễn Đức Thành, VP Marketing, [Real Estate Brand — revenue 800B/năm]"
+   }
+  }
+ },
+ {
+  "n": 9,
+  "sku": "E-BDBR014",
+  "tier": "3",
+  "name": "IMC Standard — Cr + Inf + Med + Strategy(P)",
+  "role": "Core / Premium",
+  "combo": "Creative + Influencer + Media + Strategy (Pro)",
+  "status": "Validated — 5 projects",
+  "stType": "validated",
+  "verticals": "All vertical",
+  "stdName": "Bundle. Branding. [≥800M]. IMC Standard (Strategy Pro)",
+  "components": [
+   {
+    "sku": "E-CRBR003",
+    "fn": "Creative",
+    "pct": 20
+   },
+   {
+    "sku": "E-INBR001",
+    "fn": "Influencer",
+    "pct": 25
+   },
+   {
+    "sku": "E-MEBR005",
+    "fn": "Media",
+    "pct": 40
+   },
+   {
+    "sku": "E-STBR004",
+    "fn": "Strategy Pro",
+    "pct": 15
+   }
+  ],
+  "vi": {
+   "overview": "IMC Standard là gói IMC chủ lực, tích hợp Creative, Influencer và Media dưới sự dẫn dắt của Strategy Pro. Không chỉ kết nối các đầu việc, giải pháp xây dựng hạ tầng tăng trưởng thương hiệu gồm định vị, phân tích cạnh tranh, mô hình phân bổ truyền thông, cơ chế rà soát theo quý và báo cáo tích hợp. Gói phù hợp với doanh nghiệp cần một đối tác vừa có năng lực tư duy chiến lược, vừa đủ sức triển khai.",
+   "customers": [
+    "Ngành ưu tiên: Tất cả ngành (All vertical)",
+    "Quy mô: Revenue 500B-5,000B/năm, team marketing 15-30 người",
+    "Budget: Từ 800M/tháng (creative + KOL + media + strategy)",
+    "Bối cảnh: Đang dùng full-service agency hoặc 3+ vendors, chưa hài lòng với strategic depth hoặc integration level. Muốn 1 partner vừa think vừa execute",
+    "Pain level: Critical — marketing budget lớn nhưng ROI unclear, board pressure tăng, cần partner có strategic backbone"
+   ],
+   "problems": [
+    "Execution without strategy depth: Current agencies execute well nhưng strategy shallow — annual brand plan 1 deck, không quarterly refresh, không competitive dynamic tracking. Hậu quả: marketing investment reactive, miss market opportunities, competitor share grows.",
+    "Integration surface-level: Full-service agency claim \"integrated\" nhưng creative team, KOL team, media team vẫn operate in silos with different P&Ls. Integration chỉ ở slide deck, không ở execution. Hậu quả: campaign elements don't reinforce each other, total impact < sum of parts.",
+    "ROI accountability gap: Với budget 800M+/tháng, board expect clear ROI framework. Current agencies deliver activity metrics, not business outcome metrics. Hậu quả: CMO under fire every board meeting, marketing position weakened internally."
+   ],
+   "solution": "Strategy Pro tham gia trực tiếp vào đội ngũ thực thi, liên tục chuyển hóa bối cảnh kinh doanh thành quyết định về thông điệp, sáng tạo, KOL và Media. Một khung đo lường chung liên kết chỉ số truyền thông với kết quả kinh doanh, giúp CMO quản trị hiệu quả và trao đổi với ban lãnh đạo trên cùng một ngôn ngữ.",
+   "quote": {
+    "text": "Chúng tôi từng dùng 1 global agency lớn — retainer cao, nhưng mỗi campaign phải brief lại từ đầu, strategy chỉ là 1 deck đầu năm. Với PMAX IMC Standard, strategy team biết business context sâu và refresh strategy mỗi quý. Quan trọng nhất: giờ tôi có ROI framework present board, thay vì chỉ show reach và views.",
+    "who": "— Trần Minh Tuấn, CMO, [Manufacturing Brand — revenue 3,000B/năm]"
+   }
+  },
+  "en": {
+   "overview": "IMC Standard is PMAX’s flagship integrated-marketing bundle, bringing Creative, Influencer, and Media together under Strategy Pro. Beyond coordinating deliverables, it establishes brand-growth infrastructure: positioning, competitive analysis, media allocation, quarterly strategic reviews, and integrated reporting. It is designed for enterprises that need a partner able to think and execute.",
+   "customers": [
+    "Priority industries: All vertical",
+    "Business profile: Brands with annual revenue of VND 500–5,000 billion, marketing teams of 15–30 people, and integrated budgets from VND 800 million per month."
+   ],
+   "solution": "Strategy Pro works inside the execution team, continuously translating business context into decisions across messaging, creative, talent, and media. One measurement framework connects communication indicators to business outcomes, enabling CMOs to manage performance and engage leadership in commercial terms.",
+   "quote": {
+    "text": "Chúng tôi từng dùng 1 global agency lớn — retainer cao, nhưng mỗi campaign phải brief lại từ đầu, strategy chỉ là 1 deck đầu năm. Với PMAX IMC Standard, strategy team biết business context sâu và refresh strategy mỗi quý. Quan trọng nhất: giờ tôi có ROI framework present board, thay vì chỉ show reach và views.",
+    "who": "— Trần Minh Tuấn, CMO, [Manufacturing Brand — revenue 3,000B/năm]"
+   }
+  }
+ },
+ {
+  "n": 10,
+  "sku": "E-BDBR015",
+  "tier": "3",
+  "name": "IMC + Live — Cr + Inf + Live + Med + Strategy(P)",
+  "role": "Core / Premium",
+  "combo": "Creative + Influencer + Livestream + Media + Strategy (Pro)",
+  "status": "Validated — 3 projects, growing YTD26",
+  "stType": "validated",
+  "verticals": "FMCG, Beauty, Real Estate, Education, Fashion, Home, Finance, Auto, Healthcare",
+  "stdName": "Bundle. Branding. [≥1B]. Full IMC with Live (Strategy Pro)",
+  "components": [
+   {
+    "sku": "E-CRBR003",
+    "fn": "Creative",
+    "pct": 15
+   },
+   {
+    "sku": "E-INBR001",
+    "fn": "Influencer",
+    "pct": 20
+   },
+   {
+    "sku": "E-LSBR001",
+    "fn": "Livestream",
+    "pct": 20
+   },
+   {
+    "sku": "E-MEBR005",
+    "fn": "Media",
+    "pct": 35
+   },
+   {
+    "sku": "E-STBR004",
+    "fn": "Strategy Pro",
+    "pct": 10
+   }
+  ],
+  "vi": {
+   "overview": "IMC + Live tích hợp năm năng lực — Creative, Influencer, Livestream, Media và Strategy Pro — trong một hệ vận hành xuyên suốt từ xây dựng thương hiệu đến chuyển đổi thương mại. Gói dành cho doanh nghiệp có đồng thời mục tiêu dài hạn về sức mạnh thương hiệu và mục tiêu ngắn hạn về doanh thu, nhưng đang mất hiệu quả vì quản trị quá nhiều nhà cung cấp.",
+   "customers": [
+    "Ngành ưu tiên: FMCG, Beauty, Real Estate, Education, Fashion, Home, Finance, Auto, Healthcare",
+    "Quy mô: Revenue 800B-5,000B/năm, team marketing 20+ người",
+    "Budget: Từ 1B/tháng (all functions combined)",
+    "Bối cảnh: Cần 1 partner manage full marketing funnel — brand campaigns (creative + media + KOL) đến commerce (live selling) → hiện đang dùng 4-5 vendors",
+    "Pain level: Critical — too many vendors, no cross-funnel optimization, huge budget but fragmented impact"
+   ],
+   "problems": [
+    "4-5 vendors = operational chaos: Brand, creative, KOL, live, media agencies → 10+ contacts, 5+ weekly meetings, 5 reports, zero coordination. CMO spends 40% time managing vendors instead of strategy. Hậu quả: vendor management cost > value of specialization.",
+    "Brand-commerce disconnect: Brand campaigns (awareness) run separately from commerce campaigns (live selling) → customer journey broken. Brand promise in TVC ≠ experience in live session. Hậu quả: brand invest millions in awareness nhưng commerce doesn't capture intent, CAC doubles.",
+    "Cross-funnel optimization impossible: No single view of full funnel — each vendor optimizes their channel, nobody optimizes the journey. Hậu quả: missing 40-50% of cross-channel synergies."
+   ],
+   "solution": "PMAX chịu trách nhiệm cho toàn bộ hành trình: Strategy Pro xác lập định hướng; Creative và Influencer tạo nhu cầu; Media mở rộng quy mô; Livestream chuyển hóa nhu cầu thành doanh số. Dữ liệu và nguồn lực được tối ưu trên toàn phễu thay vì từng kênh riêng lẻ.",
+   "quote": {
+    "text": "Chúng tôi dùng 5 agencies cho marketing — coordination meeting alone chiếm 10 giờ/tuần. Chuyển sang PMAX IMC+Live, 1 team lo tất cả. Game-changer là brand campaign và live selling dùng chung KOL ecosystem — KOL build awareness rồi xuất hiện trên live → conversion rate live tăng 40%.",
+    "who": "— Hoàng Thị Mai Lan, VP Marketing, [FMCG Brand — revenue 2,000B/năm]"
+   }
+  },
+  "en": {
+   "overview": "IMC + Live integrates five capabilities—Creative, Influencer, Livestream, Media, and Strategy Pro—into one operating system spanning brand building and commerce conversion. It is built for enterprises pursuing long-term brand strength and near-term revenue while losing effectiveness to multi-vendor fragmentation.",
+   "customers": [
+    "Priority industries: FMCG, Beauty, Real Estate, Education, Fashion, Home, Finance, Auto, Healthcare",
+    "Business profile: Brands with annual revenue of VND 800–5,000 billion, marketing teams of 20 or more, and full-stack budgets from VND 1 billion per month."
+   ],
+   "solution": "PMAX owns the complete journey: Strategy Pro sets direction; Creative and Influencer create demand; Media scales it; Livestream converts it into sales. Data and investment are optimized across the funnel rather than within isolated channels.",
+   "quote": {
+    "text": "Chúng tôi dùng 5 agencies cho marketing — coordination meeting alone chiếm 10 giờ/tuần. Chuyển sang PMAX IMC+Live, 1 team lo tất cả. Game-changer là brand campaign và live selling dùng chung KOL ecosystem — KOL build awareness rồi xuất hiện trên live → conversion rate live tăng 40%.",
+    "who": "— Hoàng Thị Mai Lan, VP Marketing, [FMCG Brand — revenue 2,000B/năm]"
+   }
+  }
+ },
+ {
+  "n": 11,
+  "sku": "E-BDBR016",
+  "tier": "3",
+  "name": "IMC Live + Strategy — Cr + Live + Med + Strategy(P)",
+  "role": "Core",
+  "combo": "Creative + Livestream + Media + Strategy (Pro)",
+  "status": "Validated — 1 project",
+  "stType": "validated",
+  "verticals": "FMCG, Beauty, Real Estate, Education, Fashion, Home, Finance, Auto, Healthcare",
+  "stdName": "Bundle. Branding. [≥700M]. IMC Live+Strategy (Strategy Pro, No Influencer)",
+  "components": [
+   {
+    "sku": "E-CRBR002",
+    "fn": "Creative",
+    "pct": 20
+   },
+   {
+    "sku": "E-LSBR001",
+    "fn": "Livestream",
+    "pct": 25
+   },
+   {
+    "sku": "E-MEBR003",
+    "fn": "Media",
+    "pct": 40
+   },
+   {
+    "sku": "E-STBR004",
+    "fn": "Strategy Pro",
+    "pct": 15
+   }
+  ],
+  "vi": {
+   "overview": "IMC Live + Strategy là cấu hình IMC không phụ thuộc KOL, tích hợp Creative, Livestream và Media dưới sự dẫn dắt của Strategy Pro. Giải pháp phù hợp khi thương hiệu cần kiểm soát chặt chẽ tiếng nói, ưu tiên nội dung chuyên gia, trải nghiệm trực tiếp và uy tín từ chính thương hiệu hơn sự chứng thực của người nổi tiếng.",
+   "customers": [
+    "Ngành ưu tiên: FMCG, Beauty, Real Estate, Education, Fashion, Home, Finance, Auto, Healthcare",
+    "Quy mô: Revenue 500B-3,000B/năm",
+    "Budget: Từ 700M/tháng (creative + live + media)",
+    "Bối cảnh: Brand policy hạn chế KOL usage (compliance, brand control), nhưng cần integrated approach cho brand + commerce. Đã có strong brand voice, cần execute multi-channel without KOL dependency",
+    "Pain level: Medium-High — need integrated solution but KOL is not in their playbook"
+   ],
+   "problems": [
+    "Creative-Media-Live fragmented: Dùng 3 vendors → creative không optimize cho live context, media không align live calendar, live sessions thiếu professional creative framework. Hậu quả: brand perception in live sessions lower than brand campaigns.",
+    "KOL not applicable but alternative unclear: Brand policy restricts KOL → thiếu social proof mechanism. Cần alternative approach (expert content, brand ambassador, customer testimonials) nhưng vendors không offer structured alternative. Hậu quả: awareness campaigns rely purely on paid media, cost per reach higher.",
+    "Strategy gap for non-KOL playbook: Most agencies' integrated solutions assume KOL as core component → strategies don't work well without it. Brand needs customized strategy. Hậu quả: paying for cookie-cutter strategies, results suboptimal."
+   ],
+   "solution": "PMAX xây dựng cơ chế tạo niềm tin thay thế KOL — nội dung chuyên gia, câu chuyện khách hàng, đại sứ nội bộ hoặc sự kiện thương hiệu — rồi kết nối với Creative, Media và Livestream trong một hành trình nhất quán. Strategy Pro thiết kế riêng mô hình kênh và đo lường theo đặc thù ngành.",
+   "quote": {
+    "text": "Ngành giáo dục không phù hợp dùng KOL — phụ huynh tin chuyên gia, không tin influencer. PMAX build alternative playbook: giáo viên nổi tiếng host live Q&A, video testimonial từ phụ huynh thật. Trust score tăng 25% và enrollment qua live tăng 35%, tất cả không cần 1 KOL nào.",
+    "who": "— Phạm Thị Thanh Trúc, Marketing Director, [Education Brand — revenue 500B/năm]"
+   }
+  },
+  "en": {
+   "overview": "IMC Live + Strategy is an integrated model that does not depend on influencers, combining Creative, Livestream, and Media under Strategy Pro. It is designed for brands that require tighter message control and prefer expert-led content, direct experience, and institutional authority over celebrity endorsement.",
+   "customers": [
+    "Priority industries: FMCG, Beauty, Real Estate, Education, Fashion, Home, Finance, Auto, Healthcare",
+    "Business profile: Brands with annual revenue of VND 500–3,000 billion, restricted or low-relevance KOL usage, and integrated budgets from VND 700 million per month."
+   ],
+   "solution": "PMAX develops alternative trust mechanisms—expert content, customer stories, internal ambassadors, or brand-led events—and connects them with Creative, Media, and Livestream in one coherent journey. Strategy Pro customizes the channel and measurement model to category realities.",
+   "quote": {
+    "text": "Ngành giáo dục không phù hợp dùng KOL — phụ huynh tin chuyên gia, không tin influencer. PMAX build alternative playbook: giáo viên nổi tiếng host live Q&A, video testimonial từ phụ huynh thật. Trust score tăng 25% và enrollment qua live tăng 35%, tất cả không cần 1 KOL nào.",
+    "who": "— Phạm Thị Thanh Trúc, Marketing Director, [Education Brand — revenue 500B/năm]"
+   }
+  }
+ },
+ {
+  "n": 12,
+  "sku": "E-BDBR017",
+  "tier": "3",
+  "name": "IMC Performance — Inf + Live + Med + Strategy(P)",
+  "role": "Core",
+  "combo": "Influencer + Livestream + Media + Strategy (Pro)",
+  "status": "Monitor — 1 project, GP2 data pending",
+  "stType": "monitor",
+  "verticals": "FMCG, Beauty, Real Estate, Education, Fashion, Home, Finance, Auto, Healthcare",
+  "stdName": "Bundle. Branding. [≥600M]. Performance IMC (Strategy Pro, No Creative)",
+  "components": [
+   {
+    "sku": "E-INBR002",
+    "fn": "Influencer",
+    "pct": 25
+   },
+   {
+    "sku": "E-LSBR001",
+    "fn": "Livestream",
+    "pct": 25
+   },
+   {
+    "sku": "E-MEBR005",
+    "fn": "Media",
+    "pct": 35
+   },
+   {
+    "sku": "E-STBR004",
+    "fn": "Strategy Pro",
+    "pct": 15
+   }
+  ],
+  "note": "MONITOR — Q3 2026 validation required. 1 project in progress, GP2 data pending.",
+  "vi": {
+   "overview": "IMC Performance dành cho doanh nghiệp có năng lực Creative nội bộ mạnh nhưng cần một hệ thống phân phối và chuyển đổi hiệu quả. PMAX tích hợp Influencer, Livestream và Media dưới sự dẫn dắt của Strategy Pro; doanh nghiệp giữ vai trò tạo tài sản thương hiệu, còn PMAX chịu trách nhiệm đưa tài sản đó đến đúng đối tượng và biến sự chú ý thành kết quả thương mại.",
+   "customers": [
+    "Ngành ưu tiên: FMCG, Beauty, Real Estate, Education, Fashion, Home, Finance, Auto, Healthcare",
+    "Quy mô: Revenue 500B-3,000B/năm, có creative department 5+ người",
+    "Budget: Từ 600M/tháng (KOL + Live + Media, creative in-house)",
+    "Bối cảnh: Brand có strong creative department (product photography, TVC, technical content) → không cần outsource creative. Cần partner cho distribution channels (KOL, Live, Media) + strategic guidance",
+    "Pain level: Medium — creative strong nhưng distribution fragmented"
+   ],
+   "problems": [
+    "Creative team strong, distribution weak: Brand sản xuất creative assets chất lượng cao nhưng KOL, Live, Media execution outsource cho 3 vendors riêng → creative intent không được translate đúng vào distribution. Hậu quả: beautiful content, mediocre distribution.",
+    "No strategic layer connecting distribution channels: 3 distribution vendors (KOL agency, live vendor, media agency) chạy riêng → budget allocation arbitrary, cross-channel synergies missed. Hậu quả: distribution budget 600M+ nhưng chỉ đạt 50-60% impact potential.",
+    "Creative-performance feedback loop broken: In-house creative team không nhận performance feedback từ distribution → sản xuất content \"đẹp\" nhưng không \"perform\". Hậu quả: creative investment not optimized for business outcomes."
+   ],
+   "solution": "PMAX hoạt động như một động cơ Strategy + Distribution bổ trợ cho đội ngũ Creative của doanh nghiệp. Strategy Pro kết nối ba kênh phân phối, điều phối ngân sách và tạo vòng phản hồi hiệu quả để nội dung nội bộ ngày càng phù hợp hơn với hành vi khách hàng và mục tiêu kinh doanh.",
+   "quote": {
+    "text": "Creative department chúng tôi sản xuất content kỹ thuật rất tốt — nhưng distribution thì amateur. PMAX không cạnh tranh với creative team, mà complement: họ lấy content của mình, optimize cho từng channel, và cho feedback để mình sản xuất tốt hơn. Đó là partnership, không phải outsource.",
+    "who": "— Head of Marketing, [Manufacturing Brand — revenue 1,000B/năm]",
+    "disc": "Giả định — chưa validate, GP2 data pending"
+   }
+  },
+  "en": {
+   "overview": "IMC Performance is designed for enterprises with strong in-house creative capability that need a more effective distribution and conversion system. PMAX integrates Influencer, Livestream, and Media under Strategy Pro; the brand creates its assets, while PMAX takes responsibility for reaching the right audiences and converting attention into commercial results.",
+   "customers": [
+    "Priority industries: FMCG, Beauty, Real Estate, Education, Fashion, Home, Finance, Auto, Healthcare",
+    "Business profile: Brands with annual revenue of VND 500–3,000 billion, creative departments of at least five people, and distribution budgets from VND 600 million per month."
+   ],
+   "solution": "PMAX operates as a complementary Strategy + Distribution engine. Strategy Pro connects the three distribution channels, allocates investment, and creates a performance-feedback loop so in-house content becomes progressively more responsive to customer behavior and business objectives.",
+   "quote": {
+    "text": "Creative department chúng tôi sản xuất content kỹ thuật rất tốt — nhưng distribution thì amateur. PMAX không cạnh tranh với creative team, mà complement: họ lấy content của mình, optimize cho từng channel, và cho feedback để mình sản xuất tốt hơn. Đó là partnership, không phải outsource.",
+    "who": "— Head of Marketing, [Manufacturing Brand — revenue 1,000B/năm]",
+    "disc": "Giả định — chưa validate, GP2 data pending"
+   }
+  }
+ },
+ {
+  "n": 13,
+  "sku": "E-BDBR018",
+  "tier": "3",
+  "name": "IMC BrandComms — Cr + Med + PR + Strategy(P)",
+  "role": "Core / Premium",
+  "combo": "Creative + Media + PR + Strategy (Pro)",
+  "status": "NEW — Hypothesis, no historical evidence",
+  "stType": "new",
+  "verticals": "FMCG, Real Estate, Education, Fashion, Home, Finance, Auto, Healthcare",
+  "stdName": "Bundle. Branding. [≥800M]. BrandComms IMC (Strategy Pro)",
+  "components": [
+   {
+    "sku": "E-CRBR003",
+    "fn": "Creative",
+    "pct": 20
+   },
+   {
+    "sku": "E-MEBR005",
+    "fn": "Media",
+    "pct": 40
+   },
+   {
+    "sku": "E-PRBR001",
+    "fn": "PR",
+    "pct": 25
+   },
+   {
+    "sku": "E-STBR004",
+    "fn": "Strategy Pro",
+    "pct": 15
+   }
+  ],
+  "note": "NEW — hypothesis bundle. 90-day validation window required post-launch. Depends on PR SKU (E-PRBR001) passing QC.",
+  "vi": {
+   "overview": "IMC BrandComms tích hợp Creative, Media và PR dưới sự dẫn dắt của Strategy Pro, tạo một hệ truyền thông thống nhất trên paid, owned và earned media. Gói phù hợp với những thương hiệu mà uy tín công chúng, độ tin cậy từ báo chí và sự nhất quán thông điệp có ảnh hưởng trực tiếp đến quyết định của khách hàng.",
+   "customers": [
+    "Ngành ưu tiên: FMCG, Real Estate, Education, Fashion, Home, Finance, Auto, Healthcare",
+    "Quy mô: Revenue 800B-10,000B/năm, có dedicated communications/PR team hoặc đang muốn build",
+    "Budget: Từ 800M/tháng (creative + media + PR retainer)",
+    "Bối cảnh: Đang manage creative/media/PR qua 3 agencies → messaging inconsistent giữa paid ads, brand content, và PR stories. Cần unified narrative across all channels",
+    "Pain level: High — thương hiệu bị \"nói mỗi nơi một kiểu\" giữa quảng cáo, content, và báo chí"
+   ],
+   "problems": [
+    "Paid-Owned-Earned media disconnect: Creative team tạo content đẹp, media team chạy ads, PR team pitch stories — nhưng 3 narratives không aligned. Quảng cáo nói \"innovative\", PR story nói \"traditional values\", content nói \"fun and young\" → thương hiệu mất coherence. Hậu quả: brand perception fragmented, consumers confused, brand trust erodes.",
+    "PR treated as afterthought: Nhiều brands chạy creative + media campaigns xong mới gọi PR agency \"viết press release đi\" → PR content derivative, không newsworthy, media coverage thấp. Hậu quả: miss 40-60% earned media potential vì PR không designed into campaign from start.",
+    "No unified brand narrative strategy: 3 agencies = 3 interpretations of brand story → mỗi agency optimize cho channel mình, không cho brand narrative tổng thể. Hậu quả: brand investment fragmented, long-term brand building inefficient."
+   ],
+   "solution": "PMAX xây dựng một nền tảng thông điệp thương hiệu chung cho Creative, Media và PR. PR được thiết kế ngay từ đầu như một phần của chiến dịch — với góc nhìn có giá trị tin tức và vai trò rõ ràng trong hành trình khách hàng — thay vì được bổ sung sau cùng như một hoạt động đưa tin.",
+   "quote": {
+    "text": "Quảng cáo nói 1 đằng, PR nói 1 nẻo, content nói kiểu khác — khách hàng không biết thương hiệu mình thực sự đại diện cho điều gì. Khi có 1 partner manage cả paid, owned, earned từ 1 brand narrative — messaging cuối cùng consistent. Lần đầu tiên PR coverage thực sự amplify brand campaign thay vì chạy song song không liên quan.",
+    "who": "— Communications Director, [Finance Brand — revenue 5,000B/năm]",
+    "disc": "Giả định — chưa validate, hypothesis bundle"
+   }
+  },
+  "en": {
+   "overview": "IMC BrandComms integrates Creative, Media, and PR under Strategy Pro, creating one communications system across paid, owned, and earned media. It is designed for brands where public credibility, editorial trust, and message consistency directly influence customer decisions.",
+   "customers": [
+    "Priority industries: FMCG, Real Estate, Education, Fashion, Home, Finance, Auto, Healthcare",
+    "Business profile: Brands with annual revenue of VND 800–10,000 billion, established or emerging communications teams, and combined creative/media/PR budgets from VND 800 million per month."
+   ],
+   "solution": "PMAX establishes one brand-narrative platform for Creative, Media, and PR. Earned media is designed into the campaign from the beginning—with a newsworthy angle and a defined role in the customer journey—rather than added at the end as a publicity task.",
+   "quote": {
+    "text": "Quảng cáo nói 1 đằng, PR nói 1 nẻo, content nói kiểu khác — khách hàng không biết thương hiệu mình thực sự đại diện cho điều gì. Khi có 1 partner manage cả paid, owned, earned từ 1 brand narrative — messaging cuối cùng consistent. Lần đầu tiên PR coverage thực sự amplify brand campaign thay vì chạy song song không liên quan.",
+    "who": "— Communications Director, [Finance Brand — revenue 5,000B/năm]",
+    "disc": "Giả định — chưa validate, hypothesis bundle"
+   }
+  }
+ },
+ {
+  "n": 14,
+  "sku": "E-BDBR019",
+  "tier": "3p",
+  "name": "Full IMC Premium — All 5 Core + Strategy(M)",
+  "role": "Premium / Lock-in (Moat)",
+  "combo": "Creative + Influencer + Livestream + Media + Strategy (Max)",
+  "status": "Validated — 2 anchor projects",
+  "stType": "validated",
+  "verticals": "FMCG, Real Estate, Home, Finance, Auto, Healthcare",
+  "stdName": "Bundle. Branding. [≥1.5B]. Full IMC Premium (Strategy Max)",
+  "components": [
+   {
+    "sku": "E-CRBR003",
+    "fn": "Creative",
+    "pct": 15
+   },
+   {
+    "sku": "E-INBR001",
+    "fn": "Influencer",
+    "pct": 20
+   },
+   {
+    "sku": "E-LSBR001",
+    "fn": "Livestream",
+    "pct": 15
+   },
+   {
+    "sku": "E-MEBR003",
+    "fn": "Media",
+    "pct": 40
+   },
+   {
+    "sku": "E-STBR005",
+    "fn": "Strategy Max",
+    "pct": 10
+   }
+  ],
+  "vi": {
+   "overview": "Full IMC Premium là mô hình Total Marketing Partner cao nhất của PMAX, tích hợp Creative, Influencer, Livestream, Media và Strategy Max trong một hệ thống duy nhất. Strategy Max bổ sung tư vấn cấp lãnh đạo, kiến trúc thương hiệu, mô hình phân bổ truyền thông và cơ chế điều hành cạnh tranh. Gói dành cho khách hàng chiến lược cần một đối tác cùng chịu trách nhiệm về tăng trưởng, không chỉ một agency cung cấp đầu việc.",
+   "customers": [
+    "Ngành ưu tiên: FMCG, Real Estate, Home, Finance, Auto, Healthcare",
+    "Quy mô: Revenue 2,000B-20,000B/năm, team marketing 30-50+ người, dedicated CMO",
+    "Budget: Từ 1.5B/tháng (all functions combined)",
+    "Bối cảnh: Đang dùng global agency (retainer 500M-1B/tháng) hoặc in-house team lớn (30+ người) nhưng cần total marketing partner who thinks strategically AND executes. Current agency relationship may be stale (5+ years, no innovation)",
+    "Pain level: Critical — board expects marketing to drive growth, not just brand maintenance. CMO needs a partner, not a vendor."
+   ],
+   "problems": [
+    "Global agency model stale: Agency retainer 500M-1B/tháng, nhưng same team, same approach, same deck template cho 5+ years. No innovation, no digital-first thinking. Digital execution outsourced lại cho sub-agencies. Hậu quả: marketing budget lớn nhưng impact plateau, competitor with innovative approach gaining share.",
+    "CMO needs strategic partner, has execution vendors: CMO vision rõ ràng nhưng agencies execute, không challenge or enhance vision. Board expects CMO to prove marketing drives business growth — cần partner who can co-own marketing P&L, not just deliver campaigns. Hậu quả: CMO carries burden alone, marketing team tired, innovation stalled.",
+    "Full-funnel gap despite big team: Brand có 30+ marketing people nhưng expertise fragmented. No single person or team sees full funnel from brand awareness through commerce conversion. Hậu quả: massive marketing operation but not a marketing SYSTEM — each campaign starts from scratch."
+   ],
+   "solution": "PMAX đồng hành cùng CMO từ quyết định chiến lược đến thực thi toàn phễu. Strategy Max kết nối mục tiêu kinh doanh với kiến trúc marketing; năm năng lực cốt lõi triển khai trên một kế hoạch, một hệ dữ liệu và một cơ chế báo cáo cấp điều hành. Giá trị nằm ở khả năng đồng sở hữu kết quả, không chỉ bàn giao chiến dịch.",
+   "quote": {
+    "text": "Chúng tôi dùng 1 global agency 7 năm — retainer gần 1 tỷ/tháng, nhưng năm nào cũng cùng 1 approach, cùng 1 template deck. Khi chuyển sang PMAX Premium, difference rõ nhất: Strategy Max không chỉ plan — họ co-own marketing P&L với tôi. Lần đầu tiên tôi có partner present kết quả marketing trước board cùng tôi, không phải tôi tự present rồi agency chạy theo.",
+    "who": "— CMO, [FMCG Anchor Brand — revenue 8,000B/năm]"
+   }
+  },
+  "en": {
+   "overview": "Full IMC Premium is PMAX’s highest-level Total Marketing Partner model, integrating Creative, Influencer, Livestream, Media, and Strategy Max in one system. Strategy Max adds executive advisory, brand architecture, media-allocation modeling, and competitive governance. It is built for strategic clients seeking a partner that shares accountability for growth—not an agency that simply supplies deliverables.",
+   "customers": [
+    "Priority industries: FMCG, Real Estate, Home, Finance, Auto, Healthcare",
+    "Business profile: Anchor brands with annual revenue of VND 2,000–20,000 billion, marketing teams of 30–50+ people, a dedicated CMO, and full-stack investment from VND 1.5 billion per month."
+   ],
+   "solution": "PMAX works alongside the CMO from strategic decisions through full-funnel execution. Strategy Max connects business priorities to the marketing architecture; five core capabilities operate through one plan, shared data, and executive-level reporting. The value is shared ownership of outcomes, not campaign handover.",
+   "quote": {
+    "text": "Chúng tôi dùng 1 global agency 7 năm — retainer gần 1 tỷ/tháng, nhưng năm nào cũng cùng 1 approach, cùng 1 template deck. Khi chuyển sang PMAX Premium, difference rõ nhất: Strategy Max không chỉ plan — họ co-own marketing P&L với tôi. Lần đầu tiên tôi có partner present kết quả marketing trước board cùng tôi, không phải tôi tự present rồi agency chạy theo.",
+    "who": "— CMO, [FMCG Anchor Brand — revenue 8,000B/năm]"
+   }
+  }
+ },
+ {
+  "n": 15,
+  "sku": "E-BDBR020",
+  "tier": "3p",
+  "name": "Full Comms Premium — Cr + Inf + Med + PR + Strategy(M)",
+  "role": "Premium / Lock-in (Moat)",
+  "combo": "Creative + Influencer + Media + PR + Strategy (Max)",
+  "status": "NEW — Hypothesis, no historical evidence",
+  "stType": "new",
+  "verticals": "FMCG, Real Estate, Fashion, Home, Finance, Auto, Healthcare",
+  "stdName": "Bundle. Branding. [≥2B]. Full Comms Premium (Strategy Max)",
+  "components": [
+   {
+    "sku": "E-CRBR003",
+    "fn": "Creative",
+    "pct": 15
+   },
+   {
+    "sku": "E-INBR001",
+    "fn": "Influencer",
+    "pct": 20
+   },
+   {
+    "sku": "E-MEBR005",
+    "fn": "Media",
+    "pct": 35
+   },
+   {
+    "sku": "E-PRBR001",
+    "fn": "PR",
+    "pct": 20
+   },
+   {
+    "sku": "E-STBR005",
+    "fn": "Strategy Max",
+    "pct": 10
+   }
+  ],
+  "note": "NEW — hypothesis bundle. Highest risk. 90-day validation window required. Depends on PR SKU (E-PRBR001) passing QC.",
+  "vi": {
+   "overview": "Full Comms Premium là mô hình Total Communications Partner dành cho thương hiệu xem danh tiếng là một lợi thế cạnh tranh dài hạn. Creative, Influencer, Media và PR được tích hợp dưới sự dẫn dắt của Strategy Max, tạo một kiến trúc truyền thông thống nhất trên paid, owned, earned và social. Gói phù hợp với doanh nghiệp muốn vừa bảo vệ, vừa gia tăng tài sản thương hiệu trên toàn bộ hệ sinh thái truyền thông.",
+   "customers": [
+    "Ngành ưu tiên: FMCG, Real Estate, Fashion, Home, Finance, Auto, Healthcare",
+    "Quy mô: Revenue 3,000B-20,000B/năm, dedicated communications/PR department 5+ người, CMO + CCO",
+    "Budget: Từ 2B/tháng (all functions + PR)",
+    "Bối cảnh: Đang dùng global communications firm hoặc 5-6 agencies → muốn 1 partner own entire communications ecosystem. Brand là top 3 trong category, cần protect và grow brand equity across all channels",
+    "Pain level: Strategic — not firefighting but building long-term communications moat"
+   ],
+   "problems": [
+    "Communications fragmentation at scale: 5-6 agencies managing creative, KOL, media, PR, events → total overhead 40-60%, zero coherence. Brand narrative changes every touchpoint — TVC says \"premium quality\", KOL says \"affordable for all\", PR says \"sustainable innovation\". Hậu quả: brand dilution, customer confusion, trust erosion.",
+    "PR-Marketing wall: PR team (internal or agency) operates separately from marketing team → PR stories don't amplify marketing campaigns, marketing campaigns don't leverage PR moments. Hậu quả: miss synergy between earned and paid — most powerful combination in communications.",
+    "No integrated communications intelligence: Each agency reports their channel → no unified view of brand health across paid + earned + owned + social. CMO makes decisions based on partial data. Hậu quả: strategic decisions on incomplete information, competitors who integrate better gain advantage."
+   ],
+   "solution": "Strategy Max chịu trách nhiệm cho kiến trúc truyền thông và cơ chế ra quyết định; bốn năng lực thực thi triển khai một câu chuyện thương hiệu nhất quán trên mọi điểm chạm. Một hệ dữ liệu và báo cáo hợp nhất giúp lãnh đạo nhìn thấy sức khỏe thương hiệu, hiệu quả kênh và rủi ro danh tiếng trong cùng một bức tranh.",
+   "quote": {
+    "text": "Chúng tôi thuê 6 agencies cho marketing và PR — mỗi năm mất 2 tháng onboard, 1 tháng align, còn 9 tháng chạy. Nếu 1 partner own toàn bộ communications — từ creative concept đến media buying đến PR placement — tôi sẽ có 12 tháng chạy, không phải 9. Đó là 33% more execution time, đó là competitive advantage.",
+    "who": "— CMO, [Finance Anchor Brand — revenue 10,000B/năm]",
+    "disc": "Giả định — chưa validate, hypothesis bundle"
+   }
+  },
+  "en": {
+   "overview": "Full Comms Premium is a Total Communications Partner model for brands that treat reputation as a long-term competitive advantage. Creative, Influencer, Media, and PR are integrated under Strategy Max to create one communications architecture across paid, owned, earned, and social channels. It is designed for enterprises seeking to protect and grow brand equity across the entire ecosystem.",
+   "customers": [
+    "Priority industries: FMCG, Real Estate, Fashion, Home, Finance, Auto, Healthcare",
+    "Business profile: Anchor brands with annual revenue of VND 3,000–20,000 billion, dedicated communications leadership, and full-stack communications investment from VND 2 billion per month."
+   ],
+   "solution": "Strategy Max owns the communications architecture and decision framework; four execution capabilities deliver one coherent brand narrative across every touchpoint. Unified data and reporting give leadership a single view of brand health, channel effectiveness, and reputational risk.",
+   "quote": {
+    "text": "Chúng tôi thuê 6 agencies cho marketing và PR — mỗi năm mất 2 tháng onboard, 1 tháng align, còn 9 tháng chạy. Nếu 1 partner own toàn bộ communications — từ creative concept đến media buying đến PR placement — tôi sẽ có 12 tháng chạy, không phải 9. Đó là 33% more execution time, đó là competitive advantage.",
+    "who": "— CMO, [Finance Anchor Brand — revenue 10,000B/năm]",
+    "disc": "Giả định — chưa validate, hypothesis bundle"
+   }
+  }
+ }
+];
+
+/* ============================================================
+   RENDER
+============================================================ */
+const main = document.getElementById('main');
+const tabsEl = document.getElementById('tabs');
+const ICONS = {ov:"◆", cust:"◈", prob:"▲", sol:"★", quote:"❝"};
+
+function esc(s){return s;}
+
+/* ---- Build tabs ---- */
+function buildTabs(){
+  let html = `<button class="tab-btn active" data-tier="ov" data-target="ov"><span class="dot" style="background:#0A0A2A"></span>Overview</button>`;
+  BUNDLES.forEach(b=>{
+    html += `<button class="tab-btn" data-tier="${b.tier}" data-target="b${b.n}">
+      <span class="dot" style="background:${TIERS[b.tier].dot}"></span>${b.sku}</button>`;
+  });
+  tabsEl.innerHTML = html;
+}
+
+/* ---- Overview panel ---- */
+function overviewPanel(){
+  const counts = {"1":0,"2":0,"3":0,"3p":0};
+  BUNDLES.forEach(b=>counts[b.tier]++);
+  let rows = '';
+  const order = ["1","2","3","3p"];
+  order.forEach(t=>{
+    rows += `<tr class="tier-row ${TIERS[t].cls}" data-tier="${t}"><td colspan="7">${TIERS[t].label}</td></tr>`;
+    BUNDLES.filter(b=>b.tier===t).forEach(b=>{
+      rows += `<tr class="data-row" data-tier="${t}"
+        data-search="${(b.sku+' '+b.name+' '+b.combo+' '+b.verticals+' '+b.role+' '+b.status).toLowerCase()}"
+        data-n="${b.n}" data-name="${b.name.toLowerCase()}" data-role="${b.role.toLowerCase()}" data-status="${b.status.toLowerCase()}">
+        <td>${b.n}</td>
+        <td><a class="sku-link" data-goto="b${b.n}">${b.sku}</a></td>
+        <td class="bname">${b.name}</td>
+        <td><span class="badge role">${b.role}</span></td>
+        <td>${b.combo}</td>
+        <td class="vert">${b.verticals}</td>
+        <td><span class="st ${b.stType}"><span class="d"></span>${b.status}</span></td>
+      </tr>`;
+    });
+  });
+
+  return `<section class="panel active" id="panel-ov">
+    <div class="ov-head">
+      <h2>Bundle Catalog Overview</h2>
+      <p>15 BrandCom bundle products across 4 commercial tiers · Solution: Branding · Enterprise BU · Registration V2 (July 2026)</p>
+    </div>
+    <div class="ov-stats">
+      <div class="stat t1"><div class="n">${counts["1"]}</div><div class="l">Tier 1 · Duo</div></div>
+      <div class="stat t2"><div class="n">${counts["2"]}</div><div class="l">Tier 2 · Trio+</div></div>
+      <div class="stat t3"><div class="n">${counts["3"]}</div><div class="l">Tier 3 · IMC</div></div>
+      <div class="stat t3p"><div class="n">${counts["3p"]}</div><div class="l">Tier 3 · Premium</div></div>
+      <div class="stat"><div class="n">15</div><div class="l">Total Bundles</div></div>
+    </div>
+    <div class="toolbar">
+      <input type="text" id="ovSearch" placeholder="🔍  Search SKU, bundle name, function, vertical, role…">
+      <select id="ovTier">
+        <option value="">All tiers</option>
+        <option value="1">Tier 1 — Duo</option>
+        <option value="2">Tier 2 — Trio+</option>
+        <option value="3">Tier 3 — IMC</option>
+        <option value="3p">Tier 3 — Premium</option>
+      </select>
+      <select id="ovStatus">
+        <option value="">All statuses</option>
+        <option value="validated">Validated</option>
+        <option value="monitor">Monitor</option>
+        <option value="new">New</option>
+      </select>
+      <span class="hint" id="ovCount"></span>
+    </div>
+    <div class="tbl-wrap">
+      <table class="ov" id="ovTable">
+        <thead><tr>
+          <th data-sort="n">#<span class="arw"> ⇅</span></th>
+          <th data-sort="sku">SKU Code<span class="arw"> ⇅</span></th>
+          <th data-sort="name">Bundle Name<span class="arw"> ⇅</span></th>
+          <th data-sort="role">Product Role<span class="arw"> ⇅</span></th>
+          <th>Function Combo</th>
+          <th>Recommended Verticals</th>
+          <th data-sort="status">Status<span class="arw"> ⇅</span></th>
+        </tr></thead>
+        <tbody id="ovBody">${rows}</tbody>
+      </table>
+    </div>
+  </section>`;
+}
+
+/* ---- Bundle detail panel ---- */
+// bold the label up to the first colon ("Ngành ưu tiên: ..." / "Business profile: ...")
+function fmtKV(s){
+  const i = s.indexOf(':');
+  return i<0 ? s : '<b>'+s.slice(0,i+1)+'</b>'+s.slice(i+1);
+}
+// VN problem bullet: bold the title, red-italic the "Hậu quả:" consequence
+function fmtProblem(s){
+  let main=s, conseq='';
+  const h=s.indexOf('Hậu quả:');
+  if(h>=0){ main=s.slice(0,h).replace(/[.\s]+$/,'').trim(); conseq=s.slice(h+8).trim(); }
+  const i=main.indexOf(':');
+  const body = i<0 ? main : '<b>'+main.slice(0,i+1)+'</b>'+main.slice(i+1);
+  return `<p>${body}${conseq?` <span class="conseq">→ Hậu quả: ${conseq}</span>`:''}</p>`;
+}
+function quoteBlock(q){
+  const disc = q.disc ? `<div class="disclaim">⚠ ${q.disc}</div>` : '';
+  return `${disc}<div class="quote">"${q.text}"<span class="who">${q.who}</span></div>`;
+}
+function prColumn(lang, b){
+  const d = b[lang];
+  const vi = lang==='vi';
+  const head = vi ? '🇻🇳 Vietnamese Press Release' : '🇬🇧 English Press Release';
+  let secs = '';
+  // Overview
+  secs += `<div class="pr-sec"><h5><span class="ic">${ICONS.ov}</span>${vi?'Tổng quan':'Overview'}</h5><p>${d.overview}</p></div>`;
+  // Target Customers
+  secs += `<div class="pr-sec"><h5><span class="ic">${ICONS.cust}</span>${vi?'Khách hàng mục tiêu':'Target Customers'}</h5><ul>${d.customers.map(c=>`<li>${fmtKV(c)}</li>`).join('')}</ul></div>`;
+  // Problem — VN only (EN is the condensed executive version)
+  if(vi && d.problems && d.problems.length){
+    secs += `<div class="pr-sec"><h5><span class="ic">${ICONS.prob}</span>Vấn đề cần giải quyết</h5>${d.problems.map(fmtProblem).join('')}</div>`;
+  }
+  // PMAX Solution
+  secs += `<div class="pr-sec"><h5><span class="ic">${ICONS.sol}</span>${vi?'Giải pháp PMAX':'PMAX Solution'}</h5><p>${d.solution}</p></div>`;
+  // Testimonial
+  const tHead = vi ? 'Nhận xét từ khách hàng'
+                   : 'Client Testimonial <span class="orig">(Vietnamese original)</span>';
+  secs += `<div class="pr-sec"><h5><span class="ic">${ICONS.quote}</span>${tHead}</h5>${quoteBlock(d.quote)}</div>`;
+
+  return `<div class="pr-col ${lang}"><div class="col-head">${head}</div><div class="col-body">${secs}</div></div>`;
+}
+
+function bundlePanel(b){
+  // component bar
+  let bar='', chips='';
+  b.components.forEach((c,i)=>{
+    const col = COMP_COLORS[i%COMP_COLORS.length];
+    bar += `<div class="comp-seg" style="background:${col}; width:${c.pct}%" title="${c.fn} ${c.pct}%">${c.pct}%</div>`;
+    chips += `<span class="comp-chip"><b>${c.sku}</b> · ${c.fn} · ${c.pct}%</span>`;
+  });
+  const noteHtml = b.note ? `<div class="disclaim">⚠ ${b.note}</div>` : '';
+
+  return `<section class="panel" id="panel-b${b.n}">
+    <div class="b-hero" data-tier="${b.tier}">
+      <div class="tierlabel">${TIERS[b.tier].label} · Bundle ${b.n} / 15</div>
+      <h2>${b.name}</h2>
+      <div class="sku">${b.sku} · ${b.combo}</div>
+      <div class="stdname">Product Name Standard: ${b.stdName}</div>
+    </div>
+
+    ${noteHtml}
+
+    <div class="infocard">
+      <div class="cell"><div class="k">SKU Code</div><div class="v">${b.sku}</div></div>
+      <div class="cell"><div class="k">Bundle Name</div><div class="v">${b.name}</div></div>
+      <div class="cell"><div class="k">Function Combo</div><div class="v">${b.combo}</div></div>
+      <div class="cell"><div class="k">Product Role</div><div class="v">${b.role}</div></div>
+      <div class="cell"><div class="k">Tier</div><div class="v">${TIERS[b.tier].label}</div></div>
+      <div class="cell"><div class="k">Recommended Verticals</div><div class="v">${b.verticals}</div></div>
+      <div class="cell"><div class="k">Status</div><div class="v"><span class="st ${b.stType}"><span class="d"></span>${b.status}</span></div></div>
+      <div class="cell"><div class="k">Solution / BU</div><div class="v">Branding · Enterprise</div></div>
+    </div>
+
+    <div class="components">
+      <h4>Bundle Components — Revenue Split</h4>
+      <div class="comp-bar">${bar}</div>
+      <div class="comp-list">${chips}</div>
+    </div>
+
+    <div class="pr-toggle" data-b="${b.n}">
+      <button data-mode="both" class="active">Both languages</button>
+      <button data-mode="vi">Tiếng Việt</button>
+      <button data-mode="en">English</button>
+    </div>
+
+    <div class="pr-grid" id="prgrid-${b.n}">
+      ${prColumn('vi',b)}
+      ${prColumn('en',b)}
+    </div>
+  </section>`;
+}
+
+function render(){
+  buildTabs();
+  let html = overviewPanel();
+  BUNDLES.forEach(b=> html += bundlePanel(b));
+  main.innerHTML = html;
+  document.getElementById('pf').textContent = new Date().getFullYear() + ' · ' + BUNDLES.length + ' bundles';
+  wire();
+}
+
+/* ---- Interactions ---- */
+function switchTab(target){
+  document.querySelectorAll('.tab-btn').forEach(t=>t.classList.toggle('active', t.dataset.target===target));
+  document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
+  const panel = document.getElementById('panel-'+target);
+  if(panel) panel.classList.add('active');
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+
+function wire(){
+  // tab clicks
+  tabsEl.addEventListener('click', e=>{
+    const btn = e.target.closest('.tab-btn');
+    if(btn) switchTab(btn.dataset.target);
+  });
+  // sku links -> goto bundle
+  main.addEventListener('click', e=>{
+    const link = e.target.closest('[data-goto]');
+    if(link){ switchTab(link.dataset.goto); }
+    // pr toggle
+    const tg = e.target.closest('.pr-toggle button');
+    if(tg){
+      const wrap = tg.parentElement;
+      wrap.querySelectorAll('button').forEach(x=>x.classList.remove('active'));
+      tg.classList.add('active');
+      const grid = document.getElementById('prgrid-'+wrap.dataset.b);
+      const mode = tg.dataset.mode;
+      const vi = grid.querySelector('.pr-col.vi');
+      const en = grid.querySelector('.pr-col.en');
+      grid.classList.toggle('single', mode!=='both');
+      vi.style.display = (mode==='both'||mode==='vi')?'':'none';
+      en.style.display = (mode==='both'||mode==='en')?'':'none';
+    }
+  });
+
+  // filtering
+  const search = document.getElementById('ovSearch');
+  const tierSel = document.getElementById('ovTier');
+  const statusSel = document.getElementById('ovStatus');
+  const countEl = document.getElementById('ovCount');
+  function applyFilter(){
+    const q = search.value.trim().toLowerCase();
+    const t = tierSel.value, s = statusSel.value;
+    let shown=0;
+    document.querySelectorAll('#ovBody tr.data-row').forEach(r=>{
+      const okQ = !q || r.dataset.search.includes(q);
+      const okT = !t || r.dataset.tier===t;
+      const okS = !s || r.dataset.status.includes(s);
+      const vis = okQ&&okT&&okS;
+      r.style.display = vis?'':'none';
+      if(vis) shown++;
+    });
+    // tier headers: hide if no visible rows under them
+    document.querySelectorAll('#ovBody tr.tier-row').forEach(h=>{
+      const t2 = h.dataset.tier;
+      const any = [...document.querySelectorAll(`#ovBody tr.data-row[data-tier="${t2}"]`)].some(r=>r.style.display!=='none');
+      h.style.display = any?'':'none';
+    });
+    countEl.textContent = shown+' of 15 bundles';
+  }
+  search.addEventListener('input', applyFilter);
+  tierSel.addEventListener('change', applyFilter);
+  statusSel.addEventListener('change', applyFilter);
+  applyFilter();
+
+  // sorting (within full list, preserving tier grouping)
+  let sortState={};
+  document.querySelectorAll('#ovTable th[data-sort]').forEach(th=>{
+    th.addEventListener('click', ()=>{
+      const key = th.dataset.sort;
+      const dir = sortState[key]==='asc'?'desc':'asc';
+      sortState={}; sortState[key]=dir;
+      const body = document.getElementById('ovBody');
+      const order=["1","2","3","3p"];
+      let newHtml='';
+      order.forEach(t=>{
+        const header = body.querySelector(`tr.tier-row[data-tier="${t}"]`);
+        newHtml += header.outerHTML;
+        const rows = [...body.querySelectorAll(`tr.data-row[data-tier="${t}"]`)];
+        rows.sort((a,b)=>{
+          let va,vb;
+          if(key==='n'){va=+a.dataset.n; vb=+b.dataset.n;}
+          else if(key==='sku'){va=a.querySelector('.sku-link').textContent; vb=b.querySelector('.sku-link').textContent;}
+          else {va=a.dataset[key]||''; vb=b.dataset[key]||'';}
+          if(va<vb) return dir==='asc'?-1:1;
+          if(va>vb) return dir==='asc'?1:-1;
+          return 0;
+        });
+        rows.forEach(r=> newHtml+=r.outerHTML);
+      });
+      body.innerHTML=newHtml;
+      applyFilter();
+    });
+  });
+
+  // print: mark active panel
+  window.addEventListener('beforeprint', ()=>{
+    document.querySelectorAll('.panel').forEach(p=>p.classList.remove('print-me'));
+    const active = document.querySelector('.panel.active');
+    if(active) active.classList.add('print-me');
+  });
+}
+
+render();
+</script>
+</body>
+</html>
